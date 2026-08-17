@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ojzoor | Engineering what's next</title>
+<meta name="description" content="Ojzoor builds and runs software for educational institutions, manufacturers, businesses and government bodies. Custom platforms, automation, and our own School Education System.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20185%20173%22%3E%3Crect%20width%3D%22185%22%20height%3D%22173%22%20fill%3D%22%23FAFAFA%22%2F%3E%3Cg%20fill%3D%22%23134ABC%22%3E%3Ccircle%20cx%3D%2260.92%22%20cy%3D%2222.08%22%20r%3D%224.44%22%2F%3E%3Ccircle%20cx%3D%2265.96%22%20cy%3D%2224.46%22%20r%3D%223.83%22%2F%3E%3Ccircle%20cx%3D%2277.10%22%20cy%3D%2225.01%22%20r%3D%225.47%22%2F%3E%3Ccircle%20cx%3D%22109.00%22%20cy%3D%2225.00%22%20r%3D%224.69%22%2F%3E%3Ccircle%20cx%3D%2250.10%22%20cy%3D%2226.44%22%20r%3D%225.01%22%2F%3E%3Ccircle%20cx%3D%22141.07%22%20cy%3D%2243.00%22%20r%3D%224.72%22%2F%3E%3Ccircle%20cx%3D%2233.32%22%20cy%3D%2248.40%22%20r%3D%225.17%22%2F%3E%3Ccircle%20cx%3D%2236.00%22%20cy%3D%22121.00%22%20r%3D%224.69%22%2F%3E%3Ccircle%20cx%3D%22158.00%22%20cy%3D%22120.62%22%20r%3D%224.92%22%2F%3E%3Ccircle%20cx%3D%2242.24%22%20cy%3D%22142.33%22%20r%3D%224.98%22%2F%3E%3Ccircle%20cx%3D%22100.39%22%20cy%3D%2218.14%22%20r%3D%224.72%22%2F%3E%3Ccircle%20cx%3D%2224.00%22%20cy%3D%2253.50%22%20r%3D%224.85%22%2F%3E%3Ccircle%20cx%3D%22144.06%22%20cy%3D%2253.79%22%20r%3D%224.75%22%2F%3E%3Ccircle%20cx%3D%22161.06%22%20cy%3D%2266.36%22%20r%3D%224.69%22%2F%3E%3Ccircle%20cx%3D%22160.55%22%20cy%3D%2278.33%22%20r%3D%224.89%22%2F%3E%3Ccircle%20cx%3D%2222.53%22%20cy%3D%2288.79%22%20r%3D%224.92%22%2F%3E%3Ccircle%20cx%3D%2218.12%22%20cy%3D%22100.12%22%20r%3D%224.55%22%2F%3E%3Ccircle%20cx%3D%22148.57%22%20cy%3D%22127.20%22%20r%3D%224.85%22%2F%3E%3Ccircle%20cx%3D%22138.67%22%20cy%3D%22132.45%22%20r%3D%224.89%22%2F%3E%3Ccircle%20cx%3D%2269.16%22%20cy%3D%22151.75%22%20r%3D%224.65%22%2F%3E%3Ccircle%20cx%3D%22112.35%22%20cy%3D%22155.53%22%20r%3D%225.01%22%2F%3E%3Ccircle%20cx%3D%22125.19%22%20cy%3D%22155.00%22%20r%3D%224.65%22%2F%3E%3Ccircle%20cx%3D%22136.45%22%20cy%3D%2231.16%22%20r%3D%224.69%22%2F%3E%3Ccircle%20cx%3D%22156.00%22%20cy%3D%2288.50%22%20r%3D%224.72%22%2F%3E%3Ccircle%20cx%3D%2238.16%22%20cy%3D%22131.53%22%20r%3D%224.65%22%2F%3E%3Ccircle%20cx%3D%2289.33%22%20cy%3D%2213.95%22%20r%3D%224.41%22%2F%3E%3Ccircle%20cx%3D%2288.89%22%20cy%3D%2229.67%22%20r%3D%224.48%22%2F%3E%3Ccircle%20cx%3D%22117.57%22%20cy%3D%2232.47%22%20r%3D%224.65%22%2F%3E%3Ccircle%20cx%3D%2243.42%22%20cy%3D%2245.86%22%20r%3D%224.33%22%2F%3E%3Ccircle%20cx%3D%2226.84%22%20cy%3D%2278.59%22%20r%3D%224.72%22%2F%3E%3Ccircle%20cx%3D%2258.85%22%20cy%3D%22144.21%22%20r%3D%224.58%22%2F%3E%3Ccircle%20cx%3D%22100.88%22%20cy%3D%22153.27%22%20r%3D%224.51%22%2F%3E%3Ccircle%20cx%3D%2250.31%22%20cy%3D%22153.78%22%20r%3D%224.33%22%2F%3E%3Ccircle%20cx%3D%2278.64%22%20cy%3D%22157.64%22%20r%3D%224.51%22%2F%3E%3Ccircle%20cx%3D%2289.20%22%20cy%3D%22163.70%22%20r%3D%224.41%22%2F%3E%3Ccircle%20cx%3D%2296.94%22%20cy%3D%2234.69%22%20r%3D%223.95%22%2F%3E%3Ccircle%20cx%3D%22157.86%22%20cy%3D%2253.50%22%20r%3D%224.30%22%2F%3E%3Ccircle%20cx%3D%2218.38%22%20cy%3D%2265.31%22%20r%3D%224.18%22%2F%3E%3Ccircle%20cx%3D%22145.95%22%20cy%3D%2264.75%22%20r%3D%224.41%22%2F%3E%3Ccircle%20cx%3D%2235.70%22%20cy%3D%22110.87%22%20r%3D%224.15%22%2F%3E%3Ccircle%20cx%3D%2290.50%22%20cy%3D%22148.50%22%20r%3D%224.07%22%2F%3E%3Ccircle%20cx%3D%22124.47%22%20cy%3D%2238.31%22%20r%3D%223.78%22%2F%3E%3Ccircle%20cx%3D%2231.62%22%20cy%3D%2268.27%22%20r%3D%223.91%22%2F%3E%3Ccircle%20cx%3D%22157.29%22%20cy%3D%2299.87%22%20r%3D%223.78%22%2F%3E%3Ccircle%20cx%3D%22163.36%22%20cy%3D%22109.19%22%20r%3D%223.87%22%2F%3E%3Ccircle%20cx%3D%2217.75%22%20cy%3D%22111.42%22%20r%3D%223.91%22%2F%3E%3Ccircle%20cx%3D%2219.83%22%20cy%3D%22121.43%22%20r%3D%223.87%22%2F%3E%3Ccircle%20cx%3D%2248.00%22%20cy%3D%22125.67%22%20r%3D%223.66%22%2F%3E%3Ccircle%20cx%3D%2252.31%22%20cy%3D%22134.12%22%20r%3D%223.91%22%2F%3E%3Ccircle%20cx%3D%22129.04%22%20cy%3D%22135.29%22%20r%3D%223.91%22%2F%3E%3Ccircle%20cx%3D%22118.63%22%20cy%3D%22136.89%22%20r%3D%223.83%22%2F%3E%3Ccircle%20cx%3D%2279.13%22%20cy%3D%22138.71%22%20r%3D%223.78%22%2F%3E%3Ccircle%20cx%3D%22138.35%22%20cy%3D%22145.33%22%20r%3D%224.03%22%2F%3E%3Ccircle%20cx%3D%22127.50%22%20cy%3D%2222.50%22%20r%3D%223.91%22%2F%3E%3Ccircle%20cx%3D%2253.16%22%20cy%3D%2244.50%22%20r%3D%223.48%22%2F%3E%3Ccircle%20cx%3D%22129.68%22%20cy%3D%2244.82%22%20r%3D%223.48%22%2F%3E%3Ccircle%20cx%3D%2238.74%22%20cy%3D%2262.74%22%20r%3D%223.52%22%2F%3E%3Ccircle%20cx%3D%2214.59%22%20cy%3D%2275.00%22%20r%3D%223.52%22%2F%3E%3Ccircle%20cx%3D%2237.52%22%20cy%3D%22100.64%22%20r%3D%223.74%22%2F%3E%3Ccircle%20cx%3D%2258.85%22%20cy%3D%22126.91%22%20r%3D%223.29%22%2F%3E%3Ccircle%20cx%3D%22108.82%22%20cy%3D%22135.82%22%20r%3D%223.24%22%2F%3E%3Ccircle%20cx%3D%2285.36%22%20cy%3D%22143.72%22%20r%3D%223.52%22%2F%3E%3Ccircle%20cx%3D%2264.07%22%20cy%3D%2245.23%22%20r%3D%223.09%22%2F%3E%3Ccircle%20cx%3D%22109.50%22%20cy%3D%2245.17%22%20r%3D%223.39%22%2F%3E%3Ccircle%20cx%3D%22143.77%22%20cy%3D%22106.43%22%20r%3D%223.34%22%2F%3E%3Ccircle%20cx%3D%22134.76%22%20cy%3D%22112.45%22%20r%3D%223.24%22%2F%3E%3Ccircle%20cx%3D%2246.68%22%20cy%3D%22116.10%22%20r%3D%223.14%22%2F%3E%3Ccircle%20cx%3D%2277.78%22%20cy%3D%2214.09%22%20r%3D%222.71%22%2F%3E%3Ccircle%20cx%3D%22116.91%22%20cy%3D%2217.09%22%20r%3D%222.65%22%2F%3E%3Ccircle%20cx%3D%2239.50%22%20cy%3D%2232.50%22%20r%3D%223.19%22%2F%3E%3Ccircle%20cx%3D%22104.65%22%20cy%3D%2237.35%22%20r%3D%222.88%22%2F%3E%3Ccircle%20cx%3D%22113.11%22%20cy%3D%2251.52%22%20r%3D%222.93%22%2F%3E%3Ccircle%20cx%3D%22132.50%22%20cy%3D%2254.50%22%20r%3D%223.19%22%2F%3E%3Ccircle%20cx%3D%2245.78%22%20cy%3D%2257.91%22%20r%3D%222.71%22%2F%3E%3Ccircle%20cx%3D%2248.59%22%20cy%3D%2264.26%22%20r%3D%222.93%22%2F%3E%3Ccircle%20cx%3D%22134.00%22%20cy%3D%2264.00%22%20r%3D%222.59%22%2F%3E%3Ccircle%20cx%3D%2236.22%22%20cy%3D%2276.91%22%20r%3D%222.71%22%2F%3E%3Ccircle%20cx%3D%22148.00%22%20cy%3D%2279.83%22%20r%3D%222.71%22%2F%3E%3Ccircle%20cx%3D%2242.03%22%20cy%3D%2288.60%22%20r%3D%223.09%22%2F%3E%3Ccircle%20cx%3D%2212.26%22%20cy%3D%2289.41%22%20r%3D%222.93%22%2F%3E%3Ccircle%20cx%3D%22143.22%22%20cy%3D%2289.09%22%20r%3D%222.71%22%2F%3E%3Ccircle%20cx%3D%22167.50%22%20cy%3D%2289.50%22%20r%3D%223.19%22%2F%3E%3Ccircle%20cx%3D%2239.46%22%20cy%3D%2294.96%22%20r%3D%222.76%22%2F%3E%3Ccircle%20cx%3D%22151.05%22%20cy%3D%2296.47%22%20r%3D%222.46%22%2F%3E%3Ccircle%20cx%3D%22149.30%22%20cy%3D%2299.50%22%20r%3D%222.52%22%2F%3E%3Ccircle%20cx%3D%2228.32%22%20cy%3D%22107.32%22%20r%3D%222.99%22%2F%3E%3Ccircle%20cx%3D%22125.22%22%20cy%3D%22117.09%22%20r%3D%222.71%22%2F%3E%3Ccircle%20cx%3D%2256.28%22%20cy%3D%22119.59%22%20r%3D%223.04%22%2F%3E%3Ccircle%20cx%3D%22118.00%22%20cy%3D%22120.00%22%20r%3D%222.59%22%2F%3E%3Ccircle%20cx%3D%2227.10%22%20cy%3D%22131.52%22%20r%3D%223.04%22%2F%3E%3Ccircle%20cx%3D%2273.74%22%20cy%3D%22132.35%22%20r%3D%223.14%22%2F%3E%3Ccircle%20cx%3D%2265.93%22%20cy%3D%22140.62%22%20r%3D%223.04%22%2F%3E%3Ccircle%20cx%3D%2267.91%22%20cy%3D%22161.91%22%20r%3D%222.65%22%2F%3E%3Ccircle%20cx%3D%22102.95%22%20cy%3D%2242.25%22%20r%3D%222.52%22%2F%3E%3Ccircle%20cx%3D%2272.16%22%20cy%3D%2245.84%22%20r%3D%222.46%22%2F%3E%3Ccircle%20cx%3D%22126.63%22%20cy%3D%2258.21%22%20r%3D%222.46%22%2F%3E%3Ccircle%20cx%3D%2256.57%22%20cy%3D%2261.10%22%20r%3D%222.59%22%2F%3E%3Ccircle%20cx%3D%22127.12%22%20cy%3D%2265.69%22%20r%3D%222.26%22%2F%3E%3Ccircle%20cx%3D%2241.72%22%20cy%3D%2270.89%22%20r%3D%222.39%22%2F%3E%3Ccircle%20cx%3D%22128.00%22%20cy%3D%2271.65%22%20r%3D%222.33%22%2F%3E%3Ccircle%20cx%3D%22142.19%22%20cy%3D%2275.86%22%20r%3D%222.59%22%2F%3E%3Ccircle%20cx%3D%2245.84%22%20cy%3D%2282.84%22%20r%3D%222.46%22%2F%3E%3Ccircle%20cx%3D%2245.76%22%20cy%3D%22107.38%22%20r%3D%222.59%22%2F%3E%3Ccircle%20cx%3D%22143.72%22%20cy%3D%22117.89%22%20r%3D%222.39%22%2F%3E%3Ccircle%20cx%3D%22134.24%22%20cy%3D%22122.76%22%20r%3D%222.33%22%2F%3E%3Ccircle%20cx%3D%22100.50%22%20cy%3D%22134.27%22%20r%3D%222.65%22%2F%3E%3Ccircle%20cx%3D%22147.65%22%20cy%3D%22137.00%22%20r%3D%222.33%22%2F%3E%3Ccircle%20cx%3D%2258.76%22%20cy%3D%22158.24%22%20r%3D%222.33%22%2F%3E%3Ccircle%20cx%3D%22102.28%22%20cy%3D%22163.11%22%20r%3D%222.39%22%2F%3E%3Ccircle%20cx%3D%2259.25%22%20cy%3D%2233.62%22%20r%3D%222.26%22%2F%3E%3Ccircle%20cx%3D%2271.47%22%20cy%3D%2234.87%22%20r%3D%222.19%22%2F%3E%3Ccircle%20cx%3D%2248.27%22%20cy%3D%2238.33%22%20r%3D%222.19%22%2F%3E%3Ccircle%20cx%3D%2279.00%22%20cy%3D%2248.00%22%20r%3D%221.69%22%2F%3E%3Ccircle%20cx%3D%22123.71%22%20cy%3D%2248.50%22%20r%3D%222.11%22%2F%3E%3Ccircle%20cx%3D%2255.00%22%20cy%3D%2254.20%22%20r%3D%221.78%22%2F%3E%3Ccircle%20cx%3D%22115.50%22%20cy%3D%2257.71%22%20r%3D%222.11%22%2F%3E%3Ccircle%20cx%3D%2263.38%22%20cy%3D%2259.62%22%20r%3D%222.03%22%2F%3E%3Ccircle%20cx%3D%2249.62%22%20cy%3D%2278.38%22%20r%3D%222.03%22%2F%3E%3Ccircle%20cx%3D%2233.18%22%20cy%3D%2288.82%22%20r%3D%221.87%22%2F%3E%3Ccircle%20cx%3D%22136.38%22%20cy%3D%2288.62%22%20r%3D%222.03%22%2F%3E%3Ccircle%20cx%3D%22137.62%22%20cy%3D%2297.75%22%20r%3D%222.26%22%2F%3E%3Ccircle%20cx%3D%22150.50%22%20cy%3D%22111.29%22%20r%3D%222.11%22%2F%3E%3Ccircle%20cx%3D%2255.29%22%20cy%3D%22112.50%22%20r%3D%222.11%22%2F%3E%3Ccircle%20cx%3D%22110.92%22%20cy%3D%22121.31%22%20r%3D%222.03%22%2F%3E%3Ccircle%20cx%3D%22129.80%22%20cy%3D%22125.00%22%20r%3D%221.78%22%2F%3E%3Ccircle%20cx%3D%2269.59%22%20cy%3D%22126.12%22%20r%3D%222.33%22%2F%3E%3Ccircle%20cx%3D%22120.60%22%20cy%3D%22127.60%22%20r%3D%222.19%22%2F%3E%3Ccircle%20cx%3D%2284.20%22%20cy%3D%22128.00%22%20r%3D%221.78%22%2F%3E%3Ccircle%20cx%3D%2288.18%22%20cy%3D%22130.82%22%20r%3D%221.87%22%2F%3E%3Ccircle%20cx%3D%2293.38%22%20cy%3D%22132.38%22%20r%3D%222.03%22%2F%3E%3Ccircle%20cx%3D%2261.60%22%20cy%3D%22134.60%22%20r%3D%222.19%22%2F%3E%3Ccircle%20cx%3D%22126.62%22%20cy%3D%22143.38%22%20r%3D%222.03%22%2F%3E%3Ccircle%20cx%3D%2297.62%22%20cy%3D%22144.38%22%20r%3D%222.03%22%2F%3E%3Ccircle%20cx%3D%22133.53%22%20cy%3D%22150.13%22%20r%3D%222.19%22%2F%3E%3Ccircle%20cx%3D%2284.29%22%20cy%3D%2250.00%22%20r%3D%221.49%22%2F%3E%3Ccircle%20cx%3D%2288.17%22%20cy%3D%2251.83%22%20r%3D%221.38%22%2F%3E%3Ccircle%20cx%3D%2267.67%22%20cy%3D%2258.89%22%20r%3D%221.69%22%2F%3E%3Ccircle%20cx%3D%22116.00%22%20cy%3D%2262.29%22%20r%3D%221.49%22%2F%3E%3Ccircle%20cx%3D%22150.00%22%20cy%3D%2271.00%22%20r%3D%221.26%22%2F%3E%3Ccircle%20cx%3D%2253.00%22%20cy%3D%2275.29%22%20r%3D%221.49%22%2F%3E%3Ccircle%20cx%3D%22127.50%22%20cy%3D%2277.50%22%20r%3D%221.95%22%2F%3E%3Ccircle%20cx%3D%22140.20%22%20cy%3D%2280.50%22%20r%3D%221.78%22%2F%3E%3Ccircle%20cx%3D%22126.71%22%20cy%3D%2283.00%22%20r%3D%221.49%22%2F%3E%3Ccircle%20cx%3D%22132.88%22%20cy%3D%2294.12%22%20r%3D%221.60%22%2F%3E%3Ccircle%20cx%3D%2252.00%22%20cy%3D%2295.29%22%20r%3D%221.49%22%2F%3E%3Ccircle%20cx%3D%22129.29%22%20cy%3D%2299.00%22%20r%3D%221.49%22%2F%3E%3Ccircle%20cx%3D%2250.67%22%20cy%3D%22101.00%22%20r%3D%221.38%22%2F%3E%3Ccircle%20cx%3D%22125.83%22%20cy%3D%22102.17%22%20r%3D%221.38%22%2F%3E%3Ccircle%20cx%3D%2255.20%22%20cy%3D%22106.50%22%20r%3D%221.78%22%2F%3E%3Ccircle%20cx%3D%2266.00%22%20cy%3D%22117.00%22%20r%3D%221.49%22%2F%3E%3Ccircle%20cx%3D%2267.46%22%20cy%3D%22120.31%22%20r%3D%222.03%22%2F%3E%3Ccircle%20cx%3D%22118.36%22%20cy%3D%22146.45%22%20r%3D%221.87%22%2F%3E%3Ccircle%20cx%3D%2231.50%22%20cy%3D%2296.50%22%20r%3D%221.13%22%2F%3E%3Ccircle%20cx%3D%22106.33%22%20cy%3D%22121.33%22%20r%3D%220.98%22%2F%3E%3Ccircle%20cx%3D%2280.50%22%20cy%3D%22125.50%22%20r%3D%221.13%22%2F%3E%3Ccircle%20cx%3D%22113.50%22%20cy%3D%22128.50%22%20r%3D%221.13%22%2F%3E%3Ccircle%20cx%3D%22107.50%22%20cy%3D%22145.50%22%20r%3D%221.13%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20185%20173%22%3E%3Crect%20width%3D%22185%22%20height%3D%22173%22%20fill%3D%22%23FAFAFA%22%2F%3E%3Cg%20fill%3D%22%23134ABC%22%3E%3Ccircle%20cx%3D%2260.92%22%20cy%3D%2222.08%22%20r%3D%224.44%22%2F%3E%3Ccircle%20cx%3D%2265.96%22%20cy%3D%2224.46%22%20r%3D%223.83%22%2F%3E%3Ccircle%20cx%3D%2277.10%22%20cy%3D%2225.01%22%20r%3D%225.47%22%2F%3E%3Ccircle%20cx%3D%22109.00%22%20cy%3D%2225.00%22%20r%3D%224.69%22%2F%3E%3Ccircle%20cx%3D%2250.10%22%20cy%3D%2226.44%22%20r%3D%225.01%22%2F%3E%3Ccircle%20cx%3D%22141.07%22%20cy%3D%2243.00%22%20r%3D%224.72%22%2F%3E%3Ccircle%20cx%3D%2233.32%22%20cy%3D%2248.40%22%20r%3D%225.17%22%2F%3E%3Ccircle%20cx%3D%2236.00%22%20cy%3D%22121.00%22%20r%3D%224.69%22%2F%3E%3Ccircle%20cx%3D%22158.00%22%20cy%3D%22120.62%22%20r%3D%224.92%22%2F%3E%3Ccircle%20cx%3D%2242.24%22%20cy%3D%22142.33%22%20r%3D%224.98%22%2F%3E%3Ccircle%20cx%3D%22100.39%22%20cy%3D%2218.14%22%20r%3D%224.72%22%2F%3E%3Ccircle%20cx%3D%2224.00%22%20cy%3D%2253.50%22%20r%3D%224.85%22%2F%3E%3Ccircle%20cx%3D%22144.06%22%20cy%3D%2253.79%22%20r%3D%224.75%22%2F%3E%3Ccircle%20cx%3D%22161.06%22%20cy%3D%2266.36%22%20r%3D%224.69%22%2F%3E%3Ccircle%20cx%3D%22160.55%22%20cy%3D%2278.33%22%20r%3D%224.89%22%2F%3E%3Ccircle%20cx%3D%2222.53%22%20cy%3D%2288.79%22%20r%3D%224.92%22%2F%3E%3Ccircle%20cx%3D%2218.12%22%20cy%3D%22100.12%22%20r%3D%224.55%22%2F%3E%3Ccircle%20cx%3D%22148.57%22%20cy%3D%22127.20%22%20r%3D%224.85%22%2F%3E%3Ccircle%20cx%3D%22138.67%22%20cy%3D%22132.45%22%20r%3D%224.89%22%2F%3E%3Ccircle%20cx%3D%2269.16%22%20cy%3D%22151.75%22%20r%3D%224.65%22%2F%3E%3Ccircle%20cx%3D%22112.35%22%20cy%3D%22155.53%22%20r%3D%225.01%22%2F%3E%3Ccircle%20cx%3D%22125.19%22%20cy%3D%22155.00%22%20r%3D%224.65%22%2F%3E%3Ccircle%20cx%3D%22136.45%22%20cy%3D%2231.16%22%20r%3D%224.69%22%2F%3E%3Ccircle%20cx%3D%22156.00%22%20cy%3D%2288.50%22%20r%3D%224.72%22%2F%3E%3Ccircle%20cx%3D%2238.16%22%20cy%3D%22131.53%22%20r%3D%224.65%22%2F%3E%3Ccircle%20cx%3D%2289.33%22%20cy%3D%2213.95%22%20r%3D%224.41%22%2F%3E%3Ccircle%20cx%3D%2288.89%22%20cy%3D%2229.67%22%20r%3D%224.48%22%2F%3E%3Ccircle%20cx%3D%22117.57%22%20cy%3D%2232.47%22%20r%3D%224.65%22%2F%3E%3Ccircle%20cx%3D%2243.42%22%20cy%3D%2245.86%22%20r%3D%224.33%22%2F%3E%3Ccircle%20cx%3D%2226.84%22%20cy%3D%2278.59%22%20r%3D%224.72%22%2F%3E%3Ccircle%20cx%3D%2258.85%22%20cy%3D%22144.21%22%20r%3D%224.58%22%2F%3E%3Ccircle%20cx%3D%22100.88%22%20cy%3D%22153.27%22%20r%3D%224.51%22%2F%3E%3Ccircle%20cx%3D%2250.31%22%20cy%3D%22153.78%22%20r%3D%224.33%22%2F%3E%3Ccircle%20cx%3D%2278.64%22%20cy%3D%22157.64%22%20r%3D%224.51%22%2F%3E%3Ccircle%20cx%3D%2289.20%22%20cy%3D%22163.70%22%20r%3D%224.41%22%2F%3E%3Ccircle%20cx%3D%2296.94%22%20cy%3D%2234.69%22%20r%3D%223.95%22%2F%3E%3Ccircle%20cx%3D%22157.86%22%20cy%3D%2253.50%22%20r%3D%224.30%22%2F%3E%3Ccircle%20cx%3D%2218.38%22%20cy%3D%2265.31%22%20r%3D%224.18%22%2F%3E%3Ccircle%20cx%3D%22145.95%22%20cy%3D%2264.75%22%20r%3D%224.41%22%2F%3E%3Ccircle%20cx%3D%2235.70%22%20cy%3D%22110.87%22%20r%3D%224.15%22%2F%3E%3Ccircle%20cx%3D%2290.50%22%20cy%3D%22148.50%22%20r%3D%224.07%22%2F%3E%3Ccircle%20cx%3D%22124.47%22%20cy%3D%2238.31%22%20r%3D%223.78%22%2F%3E%3Ccircle%20cx%3D%2231.62%22%20cy%3D%2268.27%22%20r%3D%223.91%22%2F%3E%3Ccircle%20cx%3D%22157.29%22%20cy%3D%2299.87%22%20r%3D%223.78%22%2F%3E%3Ccircle%20cx%3D%22163.36%22%20cy%3D%22109.19%22%20r%3D%223.87%22%2F%3E%3Ccircle%20cx%3D%2217.75%22%20cy%3D%22111.42%22%20r%3D%223.91%22%2F%3E%3Ccircle%20cx%3D%2219.83%22%20cy%3D%22121.43%22%20r%3D%223.87%22%2F%3E%3Ccircle%20cx%3D%2248.00%22%20cy%3D%22125.67%22%20r%3D%223.66%22%2F%3E%3Ccircle%20cx%3D%2252.31%22%20cy%3D%22134.12%22%20r%3D%223.91%22%2F%3E%3Ccircle%20cx%3D%22129.04%22%20cy%3D%22135.29%22%20r%3D%223.91%22%2F%3E%3Ccircle%20cx%3D%22118.63%22%20cy%3D%22136.89%22%20r%3D%223.83%22%2F%3E%3Ccircle%20cx%3D%2279.13%22%20cy%3D%22138.71%22%20r%3D%223.78%22%2F%3E%3Ccircle%20cx%3D%22138.35%22%20cy%3D%22145.33%22%20r%3D%224.03%22%2F%3E%3Ccircle%20cx%3D%22127.50%22%20cy%3D%2222.50%22%20r%3D%223.91%22%2F%3E%3Ccircle%20cx%3D%2253.16%22%20cy%3D%2244.50%22%20r%3D%223.48%22%2F%3E%3Ccircle%20cx%3D%22129.68%22%20cy%3D%2244.82%22%20r%3D%223.48%22%2F%3E%3Ccircle%20cx%3D%2238.74%22%20cy%3D%2262.74%22%20r%3D%223.52%22%2F%3E%3Ccircle%20cx%3D%2214.59%22%20cy%3D%2275.00%22%20r%3D%223.52%22%2F%3E%3Ccircle%20cx%3D%2237.52%22%20cy%3D%22100.64%22%20r%3D%223.74%22%2F%3E%3Ccircle%20cx%3D%2258.85%22%20cy%3D%22126.91%22%20r%3D%223.29%22%2F%3E%3Ccircle%20cx%3D%22108.82%22%20cy%3D%22135.82%22%20r%3D%223.24%22%2F%3E%3Ccircle%20cx%3D%2285.36%22%20cy%3D%22143.72%22%20r%3D%223.52%22%2F%3E%3Ccircle%20cx%3D%2264.07%22%20cy%3D%2245.23%22%20r%3D%223.09%22%2F%3E%3Ccircle%20cx%3D%22109.50%22%20cy%3D%2245.17%22%20r%3D%223.39%22%2F%3E%3Ccircle%20cx%3D%22143.77%22%20cy%3D%22106.43%22%20r%3D%223.34%22%2F%3E%3Ccircle%20cx%3D%22134.76%22%20cy%3D%22112.45%22%20r%3D%223.24%22%2F%3E%3Ccircle%20cx%3D%2246.68%22%20cy%3D%22116.10%22%20r%3D%223.14%22%2F%3E%3Ccircle%20cx%3D%2277.78%22%20cy%3D%2214.09%22%20r%3D%222.71%22%2F%3E%3Ccircle%20cx%3D%22116.91%22%20cy%3D%2217.09%22%20r%3D%222.65%22%2F%3E%3Ccircle%20cx%3D%2239.50%22%20cy%3D%2232.50%22%20r%3D%223.19%22%2F%3E%3Ccircle%20cx%3D%22104.65%22%20cy%3D%2237.35%22%20r%3D%222.88%22%2F%3E%3Ccircle%20cx%3D%22113.11%22%20cy%3D%2251.52%22%20r%3D%222.93%22%2F%3E%3Ccircle%20cx%3D%22132.50%22%20cy%3D%2254.50%22%20r%3D%223.19%22%2F%3E%3Ccircle%20cx%3D%2245.78%22%20cy%3D%2257.91%22%20r%3D%222.71%22%2F%3E%3Ccircle%20cx%3D%2248.59%22%20cy%3D%2264.26%22%20r%3D%222.93%22%2F%3E%3Ccircle%20cx%3D%22134.00%22%20cy%3D%2264.00%22%20r%3D%222.59%22%2F%3E%3Ccircle%20cx%3D%2236.22%22%20cy%3D%2276.91%22%20r%3D%222.71%22%2F%3E%3Ccircle%20cx%3D%22148.00%22%20cy%3D%2279.83%22%20r%3D%222.71%22%2F%3E%3Ccircle%20cx%3D%2242.03%22%20cy%3D%2288.60%22%20r%3D%223.09%22%2F%3E%3Ccircle%20cx%3D%2212.26%22%20cy%3D%2289.41%22%20r%3D%222.93%22%2F%3E%3Ccircle%20cx%3D%22143.22%22%20cy%3D%2289.09%22%20r%3D%222.71%22%2F%3E%3Ccircle%20cx%3D%22167.50%22%20cy%3D%2289.50%22%20r%3D%223.19%22%2F%3E%3Ccircle%20cx%3D%2239.46%22%20cy%3D%2294.96%22%20r%3D%222.76%22%2F%3E%3Ccircle%20cx%3D%22151.05%22%20cy%3D%2296.47%22%20r%3D%222.46%22%2F%3E%3Ccircle%20cx%3D%22149.30%22%20cy%3D%2299.50%22%20r%3D%222.52%22%2F%3E%3Ccircle%20cx%3D%2228.32%22%20cy%3D%22107.32%22%20r%3D%222.99%22%2F%3E%3Ccircle%20cx%3D%22125.22%22%20cy%3D%22117.09%22%20r%3D%222.71%22%2F%3E%3Ccircle%20cx%3D%2256.28%22%20cy%3D%22119.59%22%20r%3D%223.04%22%2F%3E%3Ccircle%20cx%3D%22118.00%22%20cy%3D%22120.00%22%20r%3D%222.59%22%2F%3E%3Ccircle%20cx%3D%2227.10%22%20cy%3D%22131.52%22%20r%3D%223.04%22%2F%3E%3Ccircle%20cx%3D%2273.74%22%20cy%3D%22132.35%22%20r%3D%223.14%22%2F%3E%3Ccircle%20cx%3D%2265.93%22%20cy%3D%22140.62%22%20r%3D%223.04%22%2F%3E%3Ccircle%20cx%3D%2267.91%22%20cy%3D%22161.91%22%20r%3D%222.65%22%2F%3E%3Ccircle%20cx%3D%22102.95%22%20cy%3D%2242.25%22%20r%3D%222.52%22%2F%3E%3Ccircle%20cx%3D%2272.16%22%20cy%3D%2245.84%22%20r%3D%222.46%22%2F%3E%3Ccircle%20cx%3D%22126.63%22%20cy%3D%2258.21%22%20r%3D%222.46%22%2F%3E%3Ccircle%20cx%3D%2256.57%22%20cy%3D%2261.10%22%20r%3D%222.59%22%2F%3E%3Ccircle%20cx%3D%22127.12%22%20cy%3D%2265.69%22%20r%3D%222.26%22%2F%3E%3Ccircle%20cx%3D%2241.72%22%20cy%3D%2270.89%22%20r%3D%222.39%22%2F%3E%3Ccircle%20cx%3D%22128.00%22%20cy%3D%2271.65%22%20r%3D%222.33%22%2F%3E%3Ccircle%20cx%3D%22142.19%22%20cy%3D%2275.86%22%20r%3D%222.59%22%2F%3E%3Ccircle%20cx%3D%2245.84%22%20cy%3D%2282.84%22%20r%3D%222.46%22%2F%3E%3Ccircle%20cx%3D%2245.76%22%20cy%3D%22107.38%22%20r%3D%222.59%22%2F%3E%3Ccircle%20cx%3D%22143.72%22%20cy%3D%22117.89%22%20r%3D%222.39%22%2F%3E%3Ccircle%20cx%3D%22134.24%22%20cy%3D%22122.76%22%20r%3D%222.33%22%2F%3E%3Ccircle%20cx%3D%22100.50%22%20cy%3D%22134.27%22%20r%3D%222.65%22%2F%3E%3Ccircle%20cx%3D%22147.65%22%20cy%3D%22137.00%22%20r%3D%222.33%22%2F%3E%3Ccircle%20cx%3D%2258.76%22%20cy%3D%22158.24%22%20r%3D%222.33%22%2F%3E%3Ccircle%20cx%3D%22102.28%22%20cy%3D%22163.11%22%20r%3D%222.39%22%2F%3E%3Ccircle%20cx%3D%2259.25%22%20cy%3D%2233.62%22%20r%3D%222.26%22%2F%3E%3Ccircle%20cx%3D%2271.47%22%20cy%3D%2234.87%22%20r%3D%222.19%22%2F%3E%3Ccircle%20cx%3D%2248.27%22%20cy%3D%2238.33%22%20r%3D%222.19%22%2F%3E%3Ccircle%20cx%3D%2279.00%22%20cy%3D%2248.00%22%20r%3D%221.69%22%2F%3E%3Ccircle%20cx%3D%22123.71%22%20cy%3D%2248.50%22%20r%3D%222.11%22%2F%3E%3Ccircle%20cx%3D%2255.00%22%20cy%3D%2254.20%22%20r%3D%221.78%22%2F%3E%3Ccircle%20cx%3D%22115.50%22%20cy%3D%2257.71%22%20r%3D%222.11%22%2F%3E%3Ccircle%20cx%3D%2263.38%22%20cy%3D%2259.62%22%20r%3D%222.03%22%2F%3E%3Ccircle%20cx%3D%2249.62%22%20cy%3D%2278.38%22%20r%3D%222.03%22%2F%3E%3Ccircle%20cx%3D%2233.18%22%20cy%3D%2288.82%22%20r%3D%221.87%22%2F%3E%3Ccircle%20cx%3D%22136.38%22%20cy%3D%2288.62%22%20r%3D%222.03%22%2F%3E%3Ccircle%20cx%3D%22137.62%22%20cy%3D%2297.75%22%20r%3D%222.26%22%2F%3E%3Ccircle%20cx%3D%22150.50%22%20cy%3D%22111.29%22%20r%3D%222.11%22%2F%3E%3Ccircle%20cx%3D%2255.29%22%20cy%3D%22112.50%22%20r%3D%222.11%22%2F%3E%3Ccircle%20cx%3D%22110.92%22%20cy%3D%22121.31%22%20r%3D%222.03%22%2F%3E%3Ccircle%20cx%3D%22129.80%22%20cy%3D%22125.00%22%20r%3D%221.78%22%2F%3E%3Ccircle%20cx%3D%2269.59%22%20cy%3D%22126.12%22%20r%3D%222.33%22%2F%3E%3Ccircle%20cx%3D%22120.60%22%20cy%3D%22127.60%22%20r%3D%222.19%22%2F%3E%3Ccircle%20cx%3D%2284.20%22%20cy%3D%22128.00%22%20r%3D%221.78%22%2F%3E%3Ccircle%20cx%3D%2288.18%22%20cy%3D%22130.82%22%20r%3D%221.87%22%2F%3E%3Ccircle%20cx%3D%2293.38%22%20cy%3D%22132.38%22%20r%3D%222.03%22%2F%3E%3Ccircle%20cx%3D%2261.60%22%20cy%3D%22134.60%22%20r%3D%222.19%22%2F%3E%3Ccircle%20cx%3D%22126.62%22%20cy%3D%22143.38%22%20r%3D%222.03%22%2F%3E%3Ccircle%20cx%3D%2297.62%22%20cy%3D%22144.38%22%20r%3D%222.03%22%2F%3E%3Ccircle%20cx%3D%22133.53%22%20cy%3D%22150.13%22%20r%3D%222.19%22%2F%3E%3Ccircle%20cx%3D%2284.29%22%20cy%3D%2250.00%22%20r%3D%221.49%22%2F%3E%3Ccircle%20cx%3D%2288.17%22%20cy%3D%2251.83%22%20r%3D%221.38%22%2F%3E%3Ccircle%20cx%3D%2267.67%22%20cy%3D%2258.89%22%20r%3D%221.69%22%2F%3E%3Ccircle%20cx%3D%22116.00%22%20cy%3D%2262.29%22%20r%3D%221.49%22%2F%3E%3Ccircle%20cx%3D%22150.00%22%20cy%3D%2271.00%22%20r%3D%221.26%22%2F%3E%3Ccircle%20cx%3D%2253.00%22%20cy%3D%2275.29%22%20r%3D%221.49%22%2F%3E%3Ccircle%20cx%3D%22127.50%22%20cy%3D%2277.50%22%20r%3D%221.95%22%2F%3E%3Ccircle%20cx%3D%22140.20%22%20cy%3D%2280.50%22%20r%3D%221.78%22%2F%3E%3Ccircle%20cx%3D%22126.71%22%20cy%3D%2283.00%22%20r%3D%221.49%22%2F%3E%3Ccircle%20cx%3D%22132.88%22%20cy%3D%2294.12%22%20r%3D%221.60%22%2F%3E%3Ccircle%20cx%3D%2252.00%22%20cy%3D%2295.29%22%20r%3D%221.49%22%2F%3E%3Ccircle%20cx%3D%22129.29%22%20cy%3D%2299.00%22%20r%3D%221.49%22%2F%3E%3Ccircle%20cx%3D%2250.67%22%20cy%3D%22101.00%22%20r%3D%221.38%22%2F%3E%3Ccircle%20cx%3D%22125.83%22%20cy%3D%22102.17%22%20r%3D%221.38%22%2F%3E%3Ccircle%20cx%3D%2255.20%22%20cy%3D%22106.50%22%20r%3D%221.78%22%2F%3E%3Ccircle%20cx%3D%2266.00%22%20cy%3D%22117.00%22%20r%3D%221.49%22%2F%3E%3Ccircle%20cx%3D%2267.46%22%20cy%3D%22120.31%22%20r%3D%222.03%22%2F%3E%3Ccircle%20cx%3D%22118.36%22%20cy%3D%22146.45%22%20r%3D%221.87%22%2F%3E%3Ccircle%20cx%3D%2231.50%22%20cy%3D%2296.50%22%20r%3D%221.13%22%2F%3E%3Ccircle%20cx%3D%22106.33%22%20cy%3D%22121.33%22%20r%3D%220.98%22%2F%3E%3Ccircle%20cx%3D%2280.50%22%20cy%3D%22125.50%22%20r%3D%221.13%22%2F%3E%3Ccircle%20cx%3D%22113.50%22%20cy%3D%22128.50%22%20r%3D%221.13%22%2F%3E%3Ccircle%20cx%3D%22107.50%22%20cy%3D%22145.50%22%20r%3D%221.13%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<meta name="theme-color" content="#0D142F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>:root{
+  --ink:#151E42; --ink-2:#3D4666; --ink-3:#6E7690;
+  --paper:#EFF1F6; --paper-2:#E4E7EF; --card:#FFFFFF;
+  --deep:#0D142F; --deep-2:#161F42; --line:#CFD4E2;
+  --red:#EE2B2B; --orange:#F58220; --yellow:#F2C21A;
+  --green:#2BC24A; --cyan:#1FA9D8; --blue:#2E6BE0; --violet:#7B2FF7;
+  --spectrum-x:linear-gradient(90deg,#7B2FF7,#2E6BE0 18%,#1FA9D8 34%,#2BC24A 52%,#F2C21A 70%,#F58220 85%,#EE2B2B);
+  --display:"Space Grotesk",system-ui,sans-serif;
+  --body:"IBM Plex Sans",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  /* full-width shell: content runs close to the viewport edge, as on enterprise sites */
+  --pad:clamp(18px,3.6vw,60px);
+  --maxw:1720px;
+  --head-h:80px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--head-h)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:3px}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad);width:100%}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);display:flex;align-items:center;gap:10px;margin:0 0 18px}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;flex:none;border-radius:2px}
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;letter-spacing:-.02em;line-height:1.06;margin:0}
+h2{font-size:clamp(30px,3.6vw,50px)}
+h3{font-size:20px;letter-spacing:-.01em;line-height:1.25}
+p{margin:0 0 1em}
+.lede{font-size:clamp(17px,1.35vw,20px);color:var(--ink-2);max-width:64ch}
+section{padding-block:clamp(60px,6.5vw,110px)}
+.sec-head{max-width:72ch;margin-bottom:clamp(34px,4vw,54px)}
+
+/* ---------- header ---------- */
+.site-head{position:sticky;top:0;z-index:90;background:var(--deep);color:#fff}
+.progress{position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--spectrum-x);transition:width .1s linear;z-index:2}
+.head-in{display:flex;align-items:center;gap:26px;height:var(--head-h)}
+.brand{display:flex;align-items:center;gap:11px;color:#fff;text-decoration:none;flex:none;background:none;border:0;padding:0;cursor:pointer;font:inherit}
+.brand .mark{height:38px;width:auto;color:var(--cyan);transition:transform .5s cubic-bezier(.2,.8,.3,1)}
+.brand:hover .mark{transform:rotate(38deg)}
+.brand .word{height:26px;width:auto}
+@media(max-width:430px){.brand .word{height:20px}.brand .mark{height:30px}.head-in{gap:12px;height:66px}}
+.nav{margin-left:auto;display:none;gap:30px}
+.nav a{font-size:15px;font-weight:500;text-decoration:none;color:rgba(255,255,255,.78);position:relative;padding-block:8px}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--violet);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav a:hover{color:#fff}
+.nav a:hover::after,.nav a.is-current::after{transform:scaleX(1)}
+.nav a.is-current{color:#fff}
+@media(min-width:1080px){.nav{display:flex}}
+.head-in .head-cta{display:none}
+@media(min-width:1080px){.head-in .head-cta{display:inline-flex;padding:12px 22px;font-size:15px}}
+.menu-btn{margin-left:auto;display:grid;place-items:center;width:44px;height:44px;border:1px solid rgba(255,255,255,.25);border-radius:12px;background:transparent;cursor:pointer;flex:none}
+.menu-btn span{display:block;width:18px;height:2px;background:#fff;border-radius:2px;position:relative;transition:transform .3s,background .3s}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:#fff;border-radius:2px;transition:transform .3s}
+.menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
+.menu-btn[aria-expanded=true] span{background:transparent}
+.menu-btn[aria-expanded=true] span::before{transform:translateY(6px) rotate(45deg)}
+.menu-btn[aria-expanded=true] span::after{transform:translateY(-6px) rotate(-45deg)}
+@media(min-width:1080px){.menu-btn{display:none}}
+.sheet{position:fixed;inset:0;z-index:85;background:var(--deep);color:#fff;padding:100px var(--pad) 40px;display:flex;flex-direction:column;gap:2px;transform:translateY(-100%);visibility:hidden;transition:transform .42s cubic-bezier(.2,.8,.3,1),visibility .42s;overflow-y:auto}
+.sheet.is-open{transform:none;visibility:visible}
+.sheet a{font-family:var(--display);font-size:clamp(24px,6vw,36px);font-weight:600;letter-spacing:-.02em;text-decoration:none;padding-block:12px;border-bottom:1px solid rgba(255,255,255,.14)}
+.sheet .btn{margin-top:26px;justify-content:center;font-size:17px;padding:16px 24px;border-bottom:0}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;font-family:var(--body);font-size:15px;font-weight:600;text-decoration:none;padding:13px 24px;border:1.5px solid transparent;cursor:pointer;transition:transform .18s,box-shadow .22s,background .22s,color .22s,border-color .22s}
+.btn svg{width:16px;height:16px;transition:transform .22s}
+.btn:hover svg{transform:translateX(3px)}
+.btn-primary{background:var(--violet);color:#fff}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(123,47,247,.8)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(21,30,66,.65)}
+.btn-ghost{border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+.btn-light{background:#fff;color:var(--ink)}
+.btn-light:hover{transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(0,0,0,.55)}
+.btn-outline-light{border-color:rgba(255,255,255,.34);color:#fff}
+.btn-outline-light:hover{border-color:#fff;background:rgba(255,255,255,.08);transform:translateY(-2px)}
+
+/* ---------- hero : statement ---------- */
+.hero{position:relative;background:var(--deep);color:#fff;overflow:hidden;padding-block:clamp(56px,7vw,104px) clamp(56px,7vw,96px);min-height:min(80vh,760px);display:flex;align-items:center}
+.hero-art{position:absolute;top:50%;right:-6%;width:min(760px,62vw);transform:translateY(-50%);opacity:.3;color:var(--blue);pointer-events:none}
+.hero-art svg{width:100%;height:auto;animation:spin 120s linear infinite;transform-origin:50% 50%}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(70% 60% at 78% 50%,rgba(46,107,224,.24),transparent 70%)}
+.hero-grid{position:relative;z-index:2;display:grid;gap:clamp(30px,4vw,72px);align-items:center;width:100%}
+@media(min-width:1000px){.hero-grid{grid-template-columns:1.5fr .82fr}}
+.statement{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(40px,7.6vw,116px);line-height:.92;letter-spacing:-.035em;margin:0;color:#fff}
+.statement .l2{display:block;padding-left:clamp(0px,7vw,150px)}
+.statement em{font-style:normal;background:linear-gradient(96deg,#7B2FF7,#2E6BE0 22%,#1FA9D8 40%,#2BC24A 58%,#F2C21A 74%,#F58220 88%,#EE2B2B);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-side{max-width:46ch}
+.hero-rule{width:56px;height:4px;background:var(--violet);margin-bottom:22px}
+.hero-side h2{font-size:clamp(22px,1.9vw,30px);color:#fff;margin-bottom:16px}
+.hero-side p{color:rgba(255,255,255,.72);font-size:16.5px;margin:0 0 24px}
+.hero-link{display:inline-flex;align-items:center;gap:12px;color:#fff;text-decoration:none;font-weight:600;font-size:16px}
+.hero-link i{display:grid;place-items:center;width:30px;height:30px;background:var(--violet);flex:none;transition:transform .22s}
+.hero-link svg{width:14px;height:14px}
+.hero-link:hover i{transform:translateX(4px)}
+
+/* ---------- quick cards under hero ---------- */
+.quick{display:grid;gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+@media(min-width:700px){.quick{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1080px){.quick{grid-template-columns:repeat(4,1fr)}}
+.q{background:var(--card);padding:32px clamp(22px,2vw,34px) 30px;text-decoration:none;display:flex;flex-direction:column;gap:10px;min-height:190px;position:relative;transition:background .25s}
+.q::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--c);transform:scaleY(0);transform-origin:top;transition:transform .3s}
+.q:hover{background:var(--paper-2)}
+.q:hover::before{transform:scaleY(1)}
+.q b{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:400}
+.q h3{font-size:21px}
+.q span{font-size:14.5px;color:var(--ink-2);margin-top:auto;display:flex;align-items:center;gap:8px}
+.q span svg{width:14px;height:14px}
+
+/* ---------- marquee ---------- */
+.marquee{border-bottom:1px solid var(--line);background:var(--paper-2);padding-block:20px;overflow:hidden;position:relative}
+.marquee::before,.marquee::after{content:"";position:absolute;top:0;bottom:0;width:110px;z-index:2;pointer-events:none}
+.marquee::before{left:0;background:linear-gradient(90deg,var(--paper-2),transparent)}
+.marquee::after{right:0;background:linear-gradient(270deg,var(--paper-2),transparent)}
+.marquee-track{display:flex;width:max-content;animation:slide 46s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+@keyframes slide{to{transform:translateX(-50%)}}
+.marquee-track ul{display:flex;align-items:center;gap:44px;margin:0;padding:0 22px;list-style:none}
+.marquee-track li{font-family:var(--display);font-weight:500;font-size:16.5px;color:var(--ink-2);white-space:nowrap;display:flex;align-items:center;gap:44px}
+.marquee-track li::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--line)}
+
+/* ---------- product ---------- */
+.product{background:var(--card);border-bottom:1px solid var(--line)}
+.prod-grid{display:grid;gap:clamp(32px,4vw,64px);align-items:start}
+@media(min-width:1000px){.prod-grid{grid-template-columns:.85fr 1.15fr}}
+.prod-flag{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;border-radius:999px;padding:6px 14px;font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:18px}
+.prod-flag i{width:6px;height:6px;border-radius:50%;background:var(--green);display:block}
+.prod-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.prod-note{font-family:var(--mono);font-size:12px;color:var(--ink-3);margin:16px 0 0}
+.mods{display:grid;gap:1px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));background:var(--line);border:1px solid var(--line)}
+.mod{background:var(--card);padding:22px 20px;transition:background .25s}
+.mod:hover{background:var(--paper)}
+.mod svg{width:26px;height:26px;color:var(--c);margin-bottom:12px}
+.mod b{display:block;font-family:var(--display);font-size:15.5px;font-weight:600;margin-bottom:4px}
+.mod span{font-size:13.5px;color:var(--ink-3);line-height:1.45;display:block}
+
+/* ---------- cards ---------- */
+.cards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);padding:32px 30px 34px;position:relative;overflow:hidden;transition:transform .26s cubic-bezier(.2,.8,.3,1),box-shadow .26s,border-color .26s}
+.card::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--c);transform:scaleX(0);transform-origin:left;transition:transform .34s cubic-bezier(.2,.8,.3,1)}
+.card:hover{transform:translateY(-5px);box-shadow:0 22px 46px -26px rgba(21,30,66,.44);border-color:transparent}
+.card:hover::before{transform:scaleX(1)}
+.card>svg{width:42px;height:42px;color:var(--c);margin-bottom:20px}
+.card h3{margin-bottom:10px}
+.card p{color:var(--ink-2);font-size:15.5px;margin:0}
+.card ul{margin:16px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:7px}
+.card li{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--ink-3);border:1px solid var(--line);border-radius:999px;padding:4px 10px}
+.card{scroll-margin-top:calc(var(--head-h) + 28px)}
+.card:target::before{transform:scaleX(1)}
+.card:target{box-shadow:0 22px 46px -26px rgba(21,30,66,.44)}
+/* ---------- industries ---------- */
+.sectors{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.sector{background:var(--card);border:1px solid var(--line);padding:30px 28px;border-top:3px solid var(--c);transition:transform .26s cubic-bezier(.2,.8,.3,1),box-shadow .26s}
+.sector:hover{transform:translateY(-4px);box-shadow:0 22px 46px -26px rgba(21,30,66,.4)}
+.sector h3{font-size:19px;margin-bottom:14px}
+.sector .from-to{display:flex;flex-direction:column;gap:9px;margin:0 0 14px;padding:0;list-style:none}
+.sector .from-to li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--ink-2)}
+.sector .from-to b{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);flex:none;width:38px;padding-top:3px;font-weight:400}
+.sector p{font-size:14.5px;color:var(--ink-3);margin:0;padding-top:14px;border-top:1px solid var(--line)}
+
+/* ---------- why ---------- */
+.why{background:var(--card);border-block:1px solid var(--line)}
+.why-grid{display:grid;gap:0;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));border-top:1px solid var(--line)}
+.why-item{padding:34px 30px 34px 0;border-right:1px solid var(--line)}
+.why-item:last-child{border-right:0}
+@media(max-width:640px){.why-item{border-right:0;border-bottom:1px solid var(--line);padding-right:0}.why-item:last-child{border-bottom:0}}
+.why-item b{display:block;font-family:var(--display);font-size:clamp(26px,3vw,40px);font-weight:600;letter-spacing:-.03em;line-height:1;color:var(--c);margin-bottom:14px}
+.why-item h3{font-size:18px;margin-bottom:8px}
+.why-item p{font-size:15px;color:var(--ink-2);margin:0;max-width:34ch}
+
+/* ---------- process ---------- */
+.proc{background:var(--deep);color:#fff}
+.proc .eyebrow{color:rgba(255,255,255,.55)}
+.proc h2{color:#fff}
+.proc .lede{color:rgba(255,255,255,.7)}
+.steps{display:grid;margin-top:clamp(32px,4vw,50px)}
+.step{display:grid;gap:8px 30px;padding-block:30px;border-top:1px solid rgba(255,255,255,.14);align-items:start}
+.step:last-child{border-bottom:1px solid rgba(255,255,255,.14)}
+@media(min-width:900px){.step{grid-template-columns:110px 1fr 1.25fr}}
+.step-n{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--c)}
+.step h3{color:#fff;font-size:23px}
+.step p{color:rgba(255,255,255,.68);margin:0;font-size:16px}
+.step-out{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:rgba(255,255,255,.5);margin-top:12px;display:block}
+
+/* ---------- stack ---------- */
+.stack-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:clamp(28px,3vw,44px)}
+.stack-col h4{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin:0 0 14px;padding-bottom:12px;border-bottom:2px solid var(--c)}
+.stack-col ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px}
+.stack-col li{font-size:15px;color:var(--ink-2)}
+
+/* ---------- plans ---------- */
+.plans{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.plan{border:1px solid var(--line);padding:32px 30px;background:var(--card);display:flex;flex-direction:column;position:relative}
+.plan.is-featured{background:var(--ink);color:#fff;border-color:var(--ink)}
+.plan-flag{position:absolute;top:-11px;right:24px;background:var(--yellow);color:var(--ink);font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.plan h3{margin-bottom:8px}
+.plan .plan-for{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);margin-bottom:18px}
+.plan.is-featured .plan-for{color:rgba(255,255,255,.6)}
+.plan p{font-size:15.5px;color:var(--ink-2);margin:0 0 20px}
+.plan.is-featured p{color:rgba(255,255,255,.74)}
+.plan ul{margin:auto 0 0;padding:20px 0 0;list-style:none;display:flex;flex-direction:column;gap:11px;border-top:1px solid var(--line)}
+.plan.is-featured ul{border-top-color:rgba(255,255,255,.2)}
+.plan li{display:flex;gap:11px;font-size:15px;align-items:flex-start}
+.plan li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--c);flex:none;margin-top:8px}
+
+/* ---------- faq ---------- */
+.faq-grid{display:grid;gap:clamp(24px,3vw,60px)}
+@media(min-width:1000px){.faq-grid{grid-template-columns:.7fr 1.3fr;align-items:start}}
+.faq-list{display:grid;gap:0;border-top:1px solid var(--line)}
+.faq-list details{border-bottom:1px solid var(--line)}
+.faq-list summary{list-style:none;cursor:pointer;padding:24px 44px 24px 0;position:relative;font-family:var(--display);font-size:clamp(17px,1.6vw,21px);font-weight:500;letter-spacing:-.01em}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"";position:absolute;right:8px;top:50%;width:14px;height:2px;background:var(--ink);border-radius:2px;transform:translateY(-50%)}
+.faq-list summary::before{content:"";position:absolute;right:14px;top:50%;width:2px;height:14px;background:var(--ink);border-radius:2px;transform:translateY(-50%);transition:transform .3s,opacity .3s}
+.faq-list details[open] summary::before{transform:translateY(-50%) rotate(90deg);opacity:0}
+.faq-list summary:hover{color:var(--blue)}
+.faq-body{padding:0 8% 26px 0;color:var(--ink-2);font-size:16px;max-width:80ch}
+.faq-body p{margin:0}
+
+/* ---------- cta band ---------- */
+.cta-band{background:var(--ink);color:#fff}
+.cta-in{display:grid;gap:26px;align-items:center}
+@media(min-width:900px){.cta-in{grid-template-columns:1.5fr auto}}
+.cta-band h2{color:#fff;font-size:clamp(28px,3.2vw,46px)}
+.cta-band p{color:rgba(255,255,255,.72);margin:14px 0 0;max-width:62ch}
+.cta-actions{display:flex;flex-wrap:wrap;gap:13px}
+
+/* ---------- contact ---------- */
+.contact{background:var(--deep);color:#fff}
+.contact-grid{display:grid;gap:clamp(32px,4vw,72px)}
+@media(min-width:960px){.contact-grid{grid-template-columns:.85fr 1.15fr}}
+.contact h2{color:#fff}
+.contact .eyebrow{color:rgba(255,255,255,.55)}
+.contact .lede{color:rgba(255,255,255,.7)}
+.contact-list{margin:30px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:16px}
+.contact-list li{display:flex;flex-direction:column;gap:2px}
+.contact-list b{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:400}
+.contact-list a,.contact-list span{color:#fff;text-decoration:none;font-size:16.5px}
+.contact-list a:hover{text-decoration:underline}
+.form{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);padding:clamp(24px,2.6vw,38px)}
+.field{margin-bottom:18px}
+.field label{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.62);margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);padding:13px 15px;color:#fff;font-family:var(--body);font-size:16px;transition:border-color .2s,background .2s}
+.field textarea{min-height:118px;resize:vertical}
+.field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.34)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--cyan);background:rgba(255,255,255,.1);outline:none}
+.field select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,rgba(255,255,255,.6) 50%),linear-gradient(135deg,rgba(255,255,255,.6) 50%,transparent 50%);background-position:calc(100% - 20px) 22px,calc(100% - 14px) 22px;background-size:6px 6px;background-repeat:no-repeat}
+.field select option{background:var(--deep);color:#fff}
+.two{display:grid;gap:18px}
+@media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
+.form-note{margin:16px 0 0;font-size:13.5px;color:rgba(255,255,255,.5)}
+.form-status{margin:16px 0 0;font-size:15px;color:#fff;display:none;padding:14px 16px}
+.form-status.is-shown{display:block}
+
+/* ---------- footer ---------- */
+.site-foot{background:var(--deep-2);color:rgba(255,255,255,.66);padding-block:52px 32px}
+.creds{display:flex;flex-wrap:wrap;gap:12px 30px;align-items:center;padding-bottom:36px;margin-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12)}
+.creds p{margin:0;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+.creds ul{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.creds li{border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:6px 14px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:rgba(255,255,255,.72)}
+.foot-top{display:flex;flex-wrap:wrap;gap:34px 54px;justify-content:space-between;align-items:flex-start}
+.foot-brand{max-width:360px}
+.foot-lockup{display:flex;align-items:center;gap:11px;margin-bottom:16px;color:#fff}
+.foot-lockup .mark{height:36px;width:auto;color:var(--cyan)}
+.foot-lockup .word{height:24px;width:auto}
+.foot-brand p{font-size:14.5px;margin:0}
+.foot-cols{display:flex;flex-wrap:wrap;gap:30px 60px}
+.foot-col h5{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.42);margin:0 0 14px;font-weight:400}
+.foot-col ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px}
+.foot-col a{text-decoration:none;font-size:15px}
+.foot-col a:hover{color:#fff}
+.foot-rule{height:3px;margin:38px 0 22px;background:var(--spectrum-x)}
+.foot-bot{display:flex;flex-wrap:wrap;gap:12px 26px;justify-content:space-between;font-size:13.5px}
+.foot-bot p{margin:0}
+
+/* ---------- to top ---------- */
+.to-top{position:fixed;right:22px;bottom:22px;z-index:80;width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);display:grid;place-items:center;cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .3s,transform .3s,box-shadow .3s}
+.to-top.is-shown{opacity:1;transform:none;pointer-events:auto}
+.to-top:hover{box-shadow:0 14px 30px -14px rgba(21,30,66,.6)}
+.to-top svg{width:18px;height:18px}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.2,.8,.3,1),transform .7s cubic-bezier(.2,.8,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .rv{opacity:1;transform:none}
+  .marquee-track{animation:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="ojzoor-word" viewBox="120 372 1300 186"><defs>
+    <linearGradient id="zTop" gradientUnits="userSpaceOnUse" x1="557.5" y1="398.5" x2="736.5" y2="398.5">
+      <stop offset="0%" stop-color="#EE2B2B"/><stop offset="100%" stop-color="#F58220"/>
+    </linearGradient>
+    <linearGradient id="zDiag" gradientUnits="userSpaceOnUse" x1="736.5" y1="398.5" x2="557.5" y2="531.5">
+      <stop offset="0%" stop-color="#F58220"/><stop offset="35%" stop-color="#F2C21A"/><stop offset="72%" stop-color="#5CC22B"/><stop offset="100%" stop-color="#1FA9D8"/>
+    </linearGradient>
+    <linearGradient id="zBot" gradientUnits="userSpaceOnUse" x1="557.5" y1="531.5" x2="736.5" y2="531.5">
+      <stop offset="0%" stop-color="#1FA9D8"/><stop offset="45%" stop-color="#2E6BE0"/><stop offset="100%" stop-color="#7B2FF7"/>
+    </linearGradient>
+    <linearGradient id="ruleL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7B2FF7"/><stop offset="45%" stop-color="#2E6BE0"/><stop offset="100%" stop-color="#2BC24A"/>
+    </linearGradient>
+    <linearGradient id="ruleR" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F2C21A"/><stop offset="50%" stop-color="#F26B1A"/><stop offset="100%" stop-color="#EE2B2B"/>
+    </linearGradient>
+    <mask id="oRing" maskUnits="userSpaceOnUse" x="110" y="360" width="250" height="215">
+      <rect x="147.5" y="398.5" width="173" height="133" rx="45" fill="none" stroke="#fff" stroke-width="21"/>
+    </mask>
+    
+  </defs>
+
+  <g fill="none" stroke-width="21" stroke-linecap="round" stroke-linejoin="round">
+    <!-- O : rainbow sweep, masked to the ring stroke -->
+    <g mask="url(#oRing)" stroke="none">
+      <path d="M 234.0,465.0 L 494.0,465.0 L 493.1,486.8 Z" fill="#32C248"/><path d="M 234.0,465.0 L 493.7,477.8 L 491.7,499.5 Z" fill="#39C246"/><path d="M 234.0,465.0 L 492.7,490.5 L 489.7,512.1 Z" fill="#41C243"/><path d="M 234.0,465.0 L 491.2,503.1 L 487.1,524.6 Z" fill="#48C241"/><path d="M 234.0,465.0 L 489.0,515.7 L 483.8,536.9 Z" fill="#50C23F"/><path d="M 234.0,465.0 L 486.2,528.2 L 480.0,549.1 Z" fill="#58C23D"/><path d="M 234.0,465.0 L 482.8,540.5 L 475.6,561.1 Z" fill="#5FC23A"/><path d="M 234.0,465.0 L 478.8,552.6 L 470.6,572.8 Z" fill="#67C238"/><path d="M 234.0,465.0 L 474.2,564.5 L 465.0,584.3 Z" fill="#6EC236"/><path d="M 234.0,465.0 L 469.0,576.2 L 458.9,595.5 Z" fill="#76C234"/><path d="M 234.0,465.0 L 463.3,587.6 L 452.2,606.4 Z" fill="#7DC231"/><path d="M 234.0,465.0 L 457.0,598.7 L 445.0,616.9 Z" fill="#85C22F"/><path d="M 234.0,465.0 L 450.2,609.4 L 437.3,627.1 Z" fill="#8DC22D"/><path d="M 234.0,465.0 L 442.8,619.9 L 429.1,636.9 Z" fill="#94C22B"/><path d="M 234.0,465.0 L 435.0,629.9 L 420.4,646.2 Z" fill="#9CC228"/><path d="M 234.0,465.0 L 426.6,639.6 L 411.3,655.2 Z" fill="#A3C226"/><path d="M 234.0,465.0 L 417.8,648.8 L 401.8,663.6 Z" fill="#A9C225"/><path d="M 234.0,465.0 L 408.6,657.6 L 391.8,671.6 Z" fill="#AEC124"/><path d="M 234.0,465.0 L 398.9,666.0 L 381.5,679.1 Z" fill="#B3C024"/><path d="M 234.0,465.0 L 388.9,673.8 L 370.8,686.1 Z" fill="#B8C023"/><path d="M 234.0,465.0 L 378.4,681.2 L 359.8,692.5 Z" fill="#BDBF22"/><path d="M 234.0,465.0 L 367.7,688.0 L 348.5,698.4 Z" fill="#C2BE22"/><path d="M 234.0,465.0 L 356.6,694.3 L 336.9,703.8 Z" fill="#C7BE21"/><path d="M 234.0,465.0 L 345.2,700.0 L 325.1,708.5 Z" fill="#CCBD21"/><path d="M 234.0,465.0 L 333.5,705.2 L 313.0,712.7 Z" fill="#D1BC20"/><path d="M 234.0,465.0 L 321.6,709.8 L 300.7,716.3 Z" fill="#D6BC20"/><path d="M 234.0,465.0 L 309.5,713.8 L 288.3,719.3 Z" fill="#DBBB1F"/><path d="M 234.0,465.0 L 297.2,717.2 L 275.8,721.6 Z" fill="#DEB81F"/><path d="M 234.0,465.0 L 284.7,720.0 L 263.2,723.4 Z" fill="#E0B41F"/><path d="M 234.0,465.0 L 272.1,722.2 L 250.4,724.5 Z" fill="#E2B120"/><path d="M 234.0,465.0 L 259.5,723.7 L 237.7,725.0 Z" fill="#E5AD20"/><path d="M 234.0,465.0 L 246.8,724.7 L 224.9,724.8 Z" fill="#E7AA20"/><path d="M 234.0,465.0 L 234.0,725.0 L 212.2,724.1 Z" fill="#E9A620"/><path d="M 234.0,465.0 L 221.2,724.7 L 199.5,722.7 Z" fill="#EBA221"/><path d="M 234.0,465.0 L 208.5,723.7 L 186.9,720.7 Z" fill="#EE9F21"/><path d="M 234.0,465.0 L 195.9,722.2 L 174.4,718.1 Z" fill="#F09B21"/><path d="M 234.0,465.0 L 183.3,720.0 L 162.1,714.8 Z" fill="#F09622"/><path d="M 234.0,465.0 L 170.8,717.2 L 149.9,711.0 Z" fill="#F09022"/><path d="M 234.0,465.0 L 158.5,713.8 L 137.9,706.6 Z" fill="#F08B23"/><path d="M 234.0,465.0 L 146.4,709.8 L 126.2,701.6 Z" fill="#EF8524"/><path d="M 234.0,465.0 L 134.5,705.2 L 114.7,696.0 Z" fill="#EF8024"/><path d="M 234.0,465.0 L 122.8,700.0 L 103.5,689.9 Z" fill="#EF7A25"/><path d="M 234.0,465.0 L 111.4,694.3 L 92.6,683.2 Z" fill="#EF7526"/><path d="M 234.0,465.0 L 100.3,688.0 L 82.1,676.0 Z" fill="#EF6F27"/><path d="M 234.0,465.0 L 89.6,681.2 L 71.9,668.3 Z" fill="#EF6A27"/><path d="M 234.0,465.0 L 79.1,673.8 L 62.1,660.1 Z" fill="#EF6428"/><path d="M 234.0,465.0 L 69.1,666.0 L 52.8,651.4 Z" fill="#EE5F29"/><path d="M 234.0,465.0 L 59.4,657.6 L 43.8,642.3 Z" fill="#EE5929"/><path d="M 234.0,465.0 L 50.2,648.8 L 35.4,632.8 Z" fill="#EE542A"/><path d="M 234.0,465.0 L 41.4,639.6 L 27.4,622.8 Z" fill="#EE4F2B"/><path d="M 234.0,465.0 L 33.0,629.9 L 19.9,612.5 Z" fill="#EE4B2B"/><path d="M 234.0,465.0 L 25.2,619.9 L 12.9,601.8 Z" fill="#EE492B"/><path d="M 234.0,465.0 L 17.8,609.4 L 6.5,590.8 Z" fill="#EE462C"/><path d="M 234.0,465.0 L 11.0,598.7 L 0.6,579.5 Z" fill="#EE442C"/><path d="M 234.0,465.0 L 4.7,587.6 L -4.8,567.9 Z" fill="#EE422C"/><path d="M 234.0,465.0 L -1.0,576.2 L -9.5,556.1 Z" fill="#EE3F2C"/><path d="M 234.0,465.0 L -6.2,564.5 L -13.7,544.0 Z" fill="#EE3D2C"/><path d="M 234.0,465.0 L -10.8,552.6 L -17.3,531.7 Z" fill="#EE3B2D"/><path d="M 234.0,465.0 L -14.8,540.5 L -20.3,519.3 Z" fill="#EE382D"/><path d="M 234.0,465.0 L -18.2,528.2 L -22.6,506.8 Z" fill="#EE362D"/><path d="M 234.0,465.0 L -21.0,515.7 L -24.4,494.2 Z" fill="#EE332D"/><path d="M 234.0,465.0 L -23.2,503.1 L -25.5,481.4 Z" fill="#EE312D"/><path d="M 234.0,465.0 L -24.7,490.5 L -26.0,468.7 Z" fill="#EE2F2E"/><path d="M 234.0,465.0 L -25.7,477.8 L -25.8,455.9 Z" fill="#EE2C2E"/><path d="M 234.0,465.0 L -26.0,465.0 L -25.1,443.2 Z" fill="#EE2B31"/><path d="M 234.0,465.0 L -25.7,452.2 L -23.7,430.5 Z" fill="#ED2B37"/><path d="M 234.0,465.0 L -24.7,439.5 L -21.7,417.9 Z" fill="#ED2B3C"/><path d="M 234.0,465.0 L -23.2,426.9 L -19.1,405.4 Z" fill="#EC2B42"/><path d="M 234.0,465.0 L -21.0,414.3 L -15.8,393.1 Z" fill="#EC2B48"/><path d="M 234.0,465.0 L -18.2,401.8 L -12.0,380.9 Z" fill="#EB2B4D"/><path d="M 234.0,465.0 L -14.8,389.5 L -7.6,368.9 Z" fill="#EB2B53"/><path d="M 234.0,465.0 L -10.8,377.4 L -2.6,357.2 Z" fill="#EA2B59"/><path d="M 234.0,465.0 L -6.2,365.5 L 3.0,345.7 Z" fill="#EA2B5E"/><path d="M 234.0,465.0 L -1.0,353.8 L 9.1,334.5 Z" fill="#E92B64"/><path d="M 234.0,465.0 L 4.7,342.4 L 15.8,323.6 Z" fill="#E92B6A"/><path d="M 234.0,465.0 L 11.0,331.3 L 23.0,313.1 Z" fill="#E82B70"/><path d="M 234.0,465.0 L 17.8,320.6 L 30.7,302.9 Z" fill="#E82B75"/><path d="M 234.0,465.0 L 25.2,310.1 L 38.9,293.1 Z" fill="#E52C7A"/><path d="M 234.0,465.0 L 33.0,300.1 L 47.6,283.8 Z" fill="#E12C7F"/><path d="M 234.0,465.0 L 41.4,290.4 L 56.7,274.8 Z" fill="#DE2D84"/><path d="M 234.0,465.0 L 50.2,281.2 L 66.2,266.4 Z" fill="#DB2E89"/><path d="M 234.0,465.0 L 59.4,272.4 L 76.2,258.4 Z" fill="#D72E8E"/><path d="M 234.0,465.0 L 69.1,264.0 L 86.5,250.9 Z" fill="#D42F93"/><path d="M 234.0,465.0 L 79.1,256.2 L 97.2,243.9 Z" fill="#D13098"/><path d="M 234.0,465.0 L 89.6,248.8 L 108.2,237.5 Z" fill="#CE309D"/><path d="M 234.0,465.0 L 100.3,242.0 L 119.5,231.6 Z" fill="#CA31A2"/><path d="M 234.0,465.0 L 111.4,235.7 L 131.1,226.2 Z" fill="#C732A7"/><path d="M 234.0,465.0 L 122.8,230.0 L 142.9,221.5 Z" fill="#C332AC"/><path d="M 234.0,465.0 L 134.5,224.8 L 155.0,217.3 Z" fill="#BE34B1"/><path d="M 234.0,465.0 L 146.4,220.2 L 167.3,213.7 Z" fill="#B935B5"/><path d="M 234.0,465.0 L 158.5,216.2 L 179.7,210.7 Z" fill="#B436BA"/><path d="M 234.0,465.0 L 170.8,212.8 L 192.2,208.4 Z" fill="#AE37BF"/><path d="M 234.0,465.0 L 183.3,210.0 L 204.8,206.6 Z" fill="#A938C4"/><path d="M 234.0,465.0 L 195.9,207.8 L 217.6,205.5 Z" fill="#A439C9"/><path d="M 234.0,465.0 L 208.5,206.3 L 230.3,205.0 Z" fill="#9F3ACD"/><path d="M 234.0,465.0 L 221.2,205.3 L 243.1,205.2 Z" fill="#9A3BD2"/><path d="M 234.0,465.0 L 234.0,205.0 L 255.8,205.9 Z" fill="#953DD7"/><path d="M 234.0,465.0 L 246.8,205.3 L 268.5,207.3 Z" fill="#8F3EDC"/><path d="M 234.0,465.0 L 259.5,206.3 L 281.1,209.3 Z" fill="#8B40DD"/><path d="M 234.0,465.0 L 272.1,207.8 L 293.6,211.9 Z" fill="#8642DE"/><path d="M 234.0,465.0 L 284.7,210.0 L 305.9,215.2 Z" fill="#8144DE"/><path d="M 234.0,465.0 L 297.2,212.8 L 318.1,219.0 Z" fill="#7C46DE"/><path d="M 234.0,465.0 L 309.5,216.2 L 330.1,223.4 Z" fill="#7749DF"/><path d="M 234.0,465.0 L 321.6,220.2 L 341.8,228.4 Z" fill="#724BDF"/><path d="M 234.0,465.0 L 333.5,224.8 L 353.3,234.0 Z" fill="#6D4DDF"/><path d="M 234.0,465.0 L 345.2,230.0 L 364.5,240.1 Z" fill="#694FE0"/><path d="M 234.0,465.0 L 356.6,235.7 L 375.4,246.8 Z" fill="#6452E0"/><path d="M 234.0,465.0 L 367.7,242.0 L 385.9,254.0 Z" fill="#6054E0"/><path d="M 234.0,465.0 L 378.4,248.8 L 396.1,261.7 Z" fill="#5B56E0"/><path d="M 234.0,465.0 L 388.9,256.2 L 405.9,269.9 Z" fill="#5758E0"/><path d="M 234.0,465.0 L 398.9,264.0 L 415.2,278.6 Z" fill="#535AE0"/><path d="M 234.0,465.0 L 408.6,272.4 L 424.2,287.7 Z" fill="#4F5CE0"/><path d="M 234.0,465.0 L 417.8,281.2 L 432.6,297.2 Z" fill="#4B5EE0"/><path d="M 234.0,465.0 L 426.6,290.4 L 440.6,307.2 Z" fill="#4760E0"/><path d="M 234.0,465.0 L 435.0,300.1 L 448.1,317.5 Z" fill="#4262E0"/><path d="M 234.0,465.0 L 442.8,310.1 L 455.1,328.2 Z" fill="#3E64E0"/><path d="M 234.0,465.0 L 450.2,320.6 L 461.5,339.2 Z" fill="#3B68DD"/><path d="M 234.0,465.0 L 457.0,331.3 L 467.4,350.5 Z" fill="#396CDB"/><path d="M 234.0,465.0 L 463.3,342.4 L 472.8,362.1 Z" fill="#3670D8"/><path d="M 234.0,465.0 L 469.0,353.8 L 477.5,373.9 Z" fill="#3374D5"/><path d="M 234.0,465.0 L 474.2,365.5 L 481.7,386.0 Z" fill="#3077D3"/><path d="M 234.0,465.0 L 478.8,377.4 L 485.3,398.3 Z" fill="#2D7BD0"/><path d="M 234.0,465.0 L 482.8,389.5 L 488.3,410.7 Z" fill="#2A7FCD"/><path d="M 234.0,465.0 L 486.2,401.8 L 490.6,423.2 Z" fill="#2B8AB8"/><path d="M 234.0,465.0 L 489.0,414.3 L 492.4,435.8 Z" fill="#2B97A0"/><path d="M 234.0,465.0 L 491.2,426.9 L 493.5,448.6 Z" fill="#2CA387"/><path d="M 234.0,465.0 L 492.7,439.5 L 494.0,461.3 Z" fill="#2DAF6E"/><path d="M 234.0,465.0 L 493.7,452.2 L 493.8,474.1 Z" fill="#2EBC55"/>
+    </g>
+    <!-- Z (rainbow) -->
+    <path d="M 557.5,398.5 H 736.5" stroke="url(#zTop)"/>
+    <path d="M 736.5,398.5 L 557.5,531.5" stroke="url(#zDiag)"/>
+    <path d="M 557.5,531.5 H 736.5" stroke="url(#zBot)"/>
+    <!-- O O -->
+    <rect x="787.5" y="398.5" width="173" height="133" rx="45" stroke="currentColor"/>
+    <rect x="1011.5" y="398.5" width="173" height="133" rx="45" stroke="currentColor"/>
+    <!-- R : open-shouldered -->
+    <path d="M 1235.5,531.5 V 500 A 24,24 0 0 1 1259.5,476 H 1342 A 30,30 0 0 0 1372,446 V 428.5 A 30,30 0 0 0 1342,398.5 H 1235.5" stroke="currentColor"/>
+    <path d="M 1305,476 L 1388,531.5" stroke="currentColor"/>
+  </g>
+
+  <!-- J : flat top, chamfered bend, bar running left -->
+  <g fill="none" stroke="currentColor" stroke-width="21" stroke-linecap="butt" stroke-linejoin="round">
+    <path d="M 493.5,419 V 499.5 L 461.5,531.5 H 384.5"/>
+  </g>
+  <circle cx="384.5" cy="531.5" r="10.5" fill="currentColor"/>
+  <path d="M 483,388 H 504 V 409 Z" fill="currentColor"/>
+
+  <!-- Tagline rules -->
+  <rect x="200" y="618" width="155" height="6" fill="url(#ruleL)"/>
+  <rect x="1181" y="618" width="155" height="6" fill="url(#ruleR)"/>
+
+  <text x="761" y="634" text-anchor="middle"
+        font-family="Poppins,Montserrat,'Century Gothic',Futura,'Trebuchet MS',Arial,sans-serif"
+        font-weight="600" font-size="32" letter-spacing="13"
+        fill="currentColor">ENGINEERING WHAT'S NEXT</text>
+</symbol>
+
+  <symbol id="ojzoor-dots" viewBox="0 0 185 173"><g fill="currentColor"><circle cx="60.92" cy="22.08" r="4.44"/><circle cx="65.96" cy="24.46" r="3.83"/><circle cx="77.10" cy="25.01" r="5.47"/><circle cx="109.00" cy="25.00" r="4.69"/><circle cx="50.10" cy="26.44" r="5.01"/><circle cx="141.07" cy="43.00" r="4.72"/><circle cx="33.32" cy="48.40" r="5.17"/><circle cx="36.00" cy="121.00" r="4.69"/><circle cx="158.00" cy="120.62" r="4.92"/><circle cx="42.24" cy="142.33" r="4.98"/><circle cx="100.39" cy="18.14" r="4.72"/><circle cx="24.00" cy="53.50" r="4.85"/><circle cx="144.06" cy="53.79" r="4.75"/><circle cx="161.06" cy="66.36" r="4.69"/><circle cx="160.55" cy="78.33" r="4.89"/><circle cx="22.53" cy="88.79" r="4.92"/><circle cx="18.12" cy="100.12" r="4.55"/><circle cx="148.57" cy="127.20" r="4.85"/><circle cx="138.67" cy="132.45" r="4.89"/><circle cx="69.16" cy="151.75" r="4.65"/><circle cx="112.35" cy="155.53" r="5.01"/><circle cx="125.19" cy="155.00" r="4.65"/><circle cx="136.45" cy="31.16" r="4.69"/><circle cx="156.00" cy="88.50" r="4.72"/><circle cx="38.16" cy="131.53" r="4.65"/><circle cx="89.33" cy="13.95" r="4.41"/><circle cx="88.89" cy="29.67" r="4.48"/><circle cx="117.57" cy="32.47" r="4.65"/><circle cx="43.42" cy="45.86" r="4.33"/><circle cx="26.84" cy="78.59" r="4.72"/><circle cx="58.85" cy="144.21" r="4.58"/><circle cx="100.88" cy="153.27" r="4.51"/><circle cx="50.31" cy="153.78" r="4.33"/><circle cx="78.64" cy="157.64" r="4.51"/><circle cx="89.20" cy="163.70" r="4.41"/><circle cx="96.94" cy="34.69" r="3.95"/><circle cx="157.86" cy="53.50" r="4.30"/><circle cx="18.38" cy="65.31" r="4.18"/><circle cx="145.95" cy="64.75" r="4.41"/><circle cx="35.70" cy="110.87" r="4.15"/><circle cx="90.50" cy="148.50" r="4.07"/><circle cx="124.47" cy="38.31" r="3.78"/><circle cx="31.62" cy="68.27" r="3.91"/><circle cx="157.29" cy="99.87" r="3.78"/><circle cx="163.36" cy="109.19" r="3.87"/><circle cx="17.75" cy="111.42" r="3.91"/><circle cx="19.83" cy="121.43" r="3.87"/><circle cx="48.00" cy="125.67" r="3.66"/><circle cx="52.31" cy="134.12" r="3.91"/><circle cx="129.04" cy="135.29" r="3.91"/><circle cx="118.63" cy="136.89" r="3.83"/><circle cx="79.13" cy="138.71" r="3.78"/><circle cx="138.35" cy="145.33" r="4.03"/><circle cx="127.50" cy="22.50" r="3.91"/><circle cx="53.16" cy="44.50" r="3.48"/><circle cx="129.68" cy="44.82" r="3.48"/><circle cx="38.74" cy="62.74" r="3.52"/><circle cx="14.59" cy="75.00" r="3.52"/><circle cx="37.52" cy="100.64" r="3.74"/><circle cx="58.85" cy="126.91" r="3.29"/><circle cx="108.82" cy="135.82" r="3.24"/><circle cx="85.36" cy="143.72" r="3.52"/><circle cx="64.07" cy="45.23" r="3.09"/><circle cx="109.50" cy="45.17" r="3.39"/><circle cx="143.77" cy="106.43" r="3.34"/><circle cx="134.76" cy="112.45" r="3.24"/><circle cx="46.68" cy="116.10" r="3.14"/><circle cx="77.78" cy="14.09" r="2.71"/><circle cx="116.91" cy="17.09" r="2.65"/><circle cx="39.50" cy="32.50" r="3.19"/><circle cx="104.65" cy="37.35" r="2.88"/><circle cx="113.11" cy="51.52" r="2.93"/><circle cx="132.50" cy="54.50" r="3.19"/><circle cx="45.78" cy="57.91" r="2.71"/><circle cx="48.59" cy="64.26" r="2.93"/><circle cx="134.00" cy="64.00" r="2.59"/><circle cx="36.22" cy="76.91" r="2.71"/><circle cx="148.00" cy="79.83" r="2.71"/><circle cx="42.03" cy="88.60" r="3.09"/><circle cx="12.26" cy="89.41" r="2.93"/><circle cx="143.22" cy="89.09" r="2.71"/><circle cx="167.50" cy="89.50" r="3.19"/><circle cx="39.46" cy="94.96" r="2.76"/><circle cx="151.05" cy="96.47" r="2.46"/><circle cx="149.30" cy="99.50" r="2.52"/><circle cx="28.32" cy="107.32" r="2.99"/><circle cx="125.22" cy="117.09" r="2.71"/><circle cx="56.28" cy="119.59" r="3.04"/><circle cx="118.00" cy="120.00" r="2.59"/><circle cx="27.10" cy="131.52" r="3.04"/><circle cx="73.74" cy="132.35" r="3.14"/><circle cx="65.93" cy="140.62" r="3.04"/><circle cx="67.91" cy="161.91" r="2.65"/><circle cx="102.95" cy="42.25" r="2.52"/><circle cx="72.16" cy="45.84" r="2.46"/><circle cx="126.63" cy="58.21" r="2.46"/><circle cx="56.57" cy="61.10" r="2.59"/><circle cx="127.12" cy="65.69" r="2.26"/><circle cx="41.72" cy="70.89" r="2.39"/><circle cx="128.00" cy="71.65" r="2.33"/><circle cx="142.19" cy="75.86" r="2.59"/><circle cx="45.84" cy="82.84" r="2.46"/><circle cx="45.76" cy="107.38" r="2.59"/><circle cx="143.72" cy="117.89" r="2.39"/><circle cx="134.24" cy="122.76" r="2.33"/><circle cx="100.50" cy="134.27" r="2.65"/><circle cx="147.65" cy="137.00" r="2.33"/><circle cx="58.76" cy="158.24" r="2.33"/><circle cx="102.28" cy="163.11" r="2.39"/><circle cx="59.25" cy="33.62" r="2.26"/><circle cx="71.47" cy="34.87" r="2.19"/><circle cx="48.27" cy="38.33" r="2.19"/><circle cx="79.00" cy="48.00" r="1.69"/><circle cx="123.71" cy="48.50" r="2.11"/><circle cx="55.00" cy="54.20" r="1.78"/><circle cx="115.50" cy="57.71" r="2.11"/><circle cx="63.38" cy="59.62" r="2.03"/><circle cx="49.62" cy="78.38" r="2.03"/><circle cx="33.18" cy="88.82" r="1.87"/><circle cx="136.38" cy="88.62" r="2.03"/><circle cx="137.62" cy="97.75" r="2.26"/><circle cx="150.50" cy="111.29" r="2.11"/><circle cx="55.29" cy="112.50" r="2.11"/><circle cx="110.92" cy="121.31" r="2.03"/><circle cx="129.80" cy="125.00" r="1.78"/><circle cx="69.59" cy="126.12" r="2.33"/><circle cx="120.60" cy="127.60" r="2.19"/><circle cx="84.20" cy="128.00" r="1.78"/><circle cx="88.18" cy="130.82" r="1.87"/><circle cx="93.38" cy="132.38" r="2.03"/><circle cx="61.60" cy="134.60" r="2.19"/><circle cx="126.62" cy="143.38" r="2.03"/><circle cx="97.62" cy="144.38" r="2.03"/><circle cx="133.53" cy="150.13" r="2.19"/><circle cx="84.29" cy="50.00" r="1.49"/><circle cx="88.17" cy="51.83" r="1.38"/><circle cx="67.67" cy="58.89" r="1.69"/><circle cx="116.00" cy="62.29" r="1.49"/><circle cx="150.00" cy="71.00" r="1.26"/><circle cx="53.00" cy="75.29" r="1.49"/><circle cx="127.50" cy="77.50" r="1.95"/><circle cx="140.20" cy="80.50" r="1.78"/><circle cx="126.71" cy="83.00" r="1.49"/><circle cx="132.88" cy="94.12" r="1.60"/><circle cx="52.00" cy="95.29" r="1.49"/><circle cx="129.29" cy="99.00" r="1.49"/><circle cx="50.67" cy="101.00" r="1.38"/><circle cx="125.83" cy="102.17" r="1.38"/><circle cx="55.20" cy="106.50" r="1.78"/><circle cx="66.00" cy="117.00" r="1.49"/><circle cx="67.46" cy="120.31" r="2.03"/><circle cx="118.36" cy="146.45" r="1.87"/><circle cx="31.50" cy="96.50" r="1.13"/><circle cx="106.33" cy="121.33" r="0.98"/><circle cx="80.50" cy="125.50" r="1.13"/><circle cx="113.50" cy="128.50" r="1.13"/><circle cx="107.50" cy="145.50" r="1.13"/></g></symbol>
+</svg>
+
+<header class="site-head" id="top">
+  <div class="progress" id="progress"></div>
+  <div class="wrap head-in">
+    <a class="brand" href="#top" id="brandLink" aria-label="Ojzoor — back to top">
+      <svg class="mark" viewBox="0 0 185 173" aria-hidden="true"><use href="#ojzoor-dots"/></svg>
+      <svg class="word" viewBox="0 0 1300 186" role="img" aria-label="Ojzoor"><use href="#ojzoor-word"/></svg>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#home" id="navHome">Home</a>
+      <a href="#product">Product</a>
+      <a href="#services">Services</a>
+      <a href="#industries">Industries</a>
+      <a href="#process">How we work</a>
+      <a href="#engage">Engagement</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary head-cta" href="#contact">Book a demo</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="sheet" aria-label="Open menu"><span></span></button>
+  </div>
+</header>
+
+<div class="sheet" id="sheet">
+  <a href="#home">Home</a>
+  <a href="#product">Product</a>
+  <a href="#services">Services</a>
+  <a href="#industries">Industries</a>
+  <a href="#process">How we work</a>
+  <a href="#engage">Engagement</a>
+  <a href="#faq">FAQ</a>
+  <a class="btn btn-primary" href="#contact">Book a demo</a>
+</div>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 185 173"><use href="#ojzoor-dots"/></svg>
+  </div>
+  <div class="wrap hero-grid">
+    <h1 class="statement">We build<span class="l2"><em>what's next</em></span></h1>
+    <div class="hero-side">
+      <div class="hero-rule"></div>
+      <h2>Engineering what's next</h2>
+      <p>Ojzoor designs, builds and runs the software that organisations depend on — for educational institutions, manufacturers, businesses of every size, and government bodies. Our own products, and systems built to order.</p>
+      <a class="hero-link" href="#services">
+        See what we do
+        <i><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/></svg></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="quick">
+  <a class="q" href="#product" style="--c:var(--blue)">
+    <b>Our product</b>
+    <h3>School Education System</h3>
+    <span>Explore the platform <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/></svg></span>
+  </a>
+  <a class="q" href="#services" style="--c:var(--cyan)">
+    <b>Services</b>
+    <h3>Six capabilities</h3>
+    <span>What we do <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/></svg></span>
+  </a>
+  <a class="q" href="#industries" style="--c:var(--green)">
+    <b>Industries</b>
+    <h3>Four sectors served</h3>
+    <span>Who we work with <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/></svg></span>
+  </a>
+  <a class="q" href="#process" style="--c:var(--orange)">
+    <b>How we work</b>
+    <h3>Four phases, fixed price</h3>
+    <span>Our approach <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/></svg></span>
+  </a>
+</div>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="track">
+    <ul id="trackList">
+      <li>Education</li><li>Library</li><li>Payroll</li>
+      <li>Stock &amp; inventory</li><li>Manufacturing</li><li>Property Tax</li><li>Estate</li>
+      <li>Human resources</li><li>Buying &amp; Selling</li><li>Public Sector</li><li>Healthcare</li><li>Plot Regularization</li>
+    </ul>
+  </div>
+</div>
+
+<section id="product" class="product">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Our product</p>
+      <h2>Ojzoor School Education System.</h2>
+      <p class="lede">Our own platform — not a reseller licence. Admissions through to report cards in one system, with logins for office staff, teachers, students and parents.</p>
+    </div>
+    <div class="prod-grid">
+      <div class="rv">
+        <span class="prod-flag"><i></i>Live demo</span>
+        <h3 style="font-size:25px;margin-bottom:14px">One system for the whole campus</h3>
+        <p style="color:var(--ink-2)">Admission forms, attendance, fee receipts, library issues, marks sheets and staff records usually sit in separate books kept by separate people. When the principal asks a question, someone spends a morning adding it up. Here it's entered once and every report is already current.</p>
+        <p style="color:var(--ink-2)">We host it, back it up and update it — or install it on your own server if your institution requires that.</p>
+        <div class="prod-actions">
+          <a class="btn btn-ink" href="http://143.110.183.128/" target="_blank" rel="noopener">Open the live demo <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h8v8M14 2L6 10M12 9v5H2V4h5"/></svg></a>
+          <a class="btn btn-ghost" href="#contact">Request a walkthrough</a>
+        </div>
+        <p class="prod-note">Opens in a new tab · Ask us for demo login details</p>
+      </div>
+      <div class="mods rv">
+      <div class="mod" style="--c:var(--violet)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 00-2 2v14a2 2 0 002 2h8"/><path d="M14 3l5 5v3"/><path d="M8 9h4M8 13h5"/><path d="M15 18.5l2 2 4-4"/></svg>
+          <b>Online admission</b><span>Applications submitted and paid for online</span>
+        </div>
+        <div class="mod" style="--c:var(--blue)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M5 10v5c0 1.7 3.1 3 7 3s7-1.3 7-3v-5"/></svg>
+          <b>Enrollment</b><span>Enquiry to enrolment, with documents attached</span>
+        </div>
+        <div class="mod" style="--c:var(--cyan)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M8 14l2.5 2.5L16 11"/></svg>
+          <b>Attendance</b><span>Daily or period-wise, marked in seconds</span>
+        </div>
+        <div class="mod" style="--c:var(--green)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="3"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/></svg>
+          <b>Fees</b><span>Structures, dues, receipts and defaulter lists</span>
+        </div>
+        <div class="mod" style="--c:var(--yellow)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h11l3 3v15H5z"/><path d="M9 12h6M9 16h4M9 8h3"/></svg>
+          <b>Exams</b><span>Marks entry, grading and printed report cards</span>
+        </div>
+        <div class="mod" style="--c:var(--orange)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><path d="M17 9h5M17 13h5"/></svg>
+          <b>Staff</b><span>Records, attendance and salary registers</span>
+        </div>
+        <div class="mod" style="--c:var(--violet)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/></svg>
+          <b>Parent portal</b><span>Attendance, marks and notices on their phone</span>
+        </div>
+        <div class="mod" style="--c:var(--red)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>
+          <b>Reports &amp; Dashboards</b><span>Live figures for management, exportable</span>
+        </div>
+        <div class="mod" style="--c:var(--blue)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M18 6l-2 2M8 16l-2 2"/><circle cx="12" cy="12" r="3.5"/></svg>
+          <b>Configurable</b><span>Your classes, sections, terms and rules</span>
+        </div>
+        <div class="mod" style="--c:var(--cyan)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5A2.5 2.5 0 016.5 2H19v16H6.5A2.5 2.5 0 004 20.5z"/><path d="M4 20.5A2.5 2.5 0 016.5 18H19v4H6.5A2.5 2.5 0 014 20.5z"/><path d="M9 7h6"/></svg>
+          <b>Library</b><span>Catalogue, issue and return, fines and stock</span>
+        </div>
+        <div class="mod" style="--c:var(--green)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="13" rx="2.5"/><path d="M8 21h8M12 17v4"/><circle cx="12" cy="9" r="2"/><path d="M8.5 14c0-1.9 1.6-3 3.5-3s3.5 1.1 3.5 3"/></svg>
+          <b>Student portal</b><span>Timetable, attendance, marks and fee dues</span>
+        </div>
+        <div class="mod" style="--c:var(--orange)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M9 2h6v3H9z"/><circle cx="9.5" cy="12" r="2"/><path d="M6 18c0-1.9 1.6-3 3.5-3s3.5 1.1 3.5 3"/><path d="M15 11h4M15 14.5h4"/></svg>
+          <b>Employee portal</b><span>Leave, payslips, duty roster and documents</span>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">What we do</p>
+      <h2>Six capabilities, held by one team.</h2>
+      <p class="lede">We'd rather be genuinely good at a short list than passable at everything. If your problem isn't here, we'll tell you and point you somewhere better.</p>
+    </div>
+    <div class="cards">
+      <article class="card rv" id="svc-custom" style="--c:var(--blue)">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="9" width="38" height="30" rx="6"/><path d="M17 21l-5 5 5 5M31 21l5 5-5 5"/></svg>
+        <h3>Custom software</h3>
+        <p>The system your organisation actually runs on, built to your rules and your terminology instead of bent around someone else's product.</p>
+        <ul><li>Web apps</li><li>Internal tools</li><li>APIs</li></ul>
+      </article>
+      <article class="card rv" id="svc-automation" style="--c:var(--green)">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6v10M24 32v10M6 24h10M32 24h10"/><circle cx="24" cy="24" r="8"/><path d="M12 12l5 5M31 31l5 5M36 12l-5 5M17 31l-5 5"/></svg>
+        <h3>Process automation</h3>
+        <p>The approvals, entries and reports your staff retype every week, handled automatically — with a record of who did what, and when.</p>
+        <ul><li>Approvals</li><li>Alerts</li><li>Documents</li></ul>
+      </article>
+      <article class="card rv" id="svc-reports" style="--c:var(--violet)">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="24" cy="12" rx="15" ry="6"/><path d="M9 12v12c0 3.3 6.7 6 15 6s15-2.7 15-6V12M9 24v12c0 3.3 6.7 6 15 6s15-2.7 15-6V24"/></svg>
+        <h3>Reports &amp; dashboards</h3>
+        <p>One screen with the numbers management actually asks for, updated live — instead of someone compiling them from four registers at month end.</p>
+        <ul><li>Dashboards</li><li>Exports</li><li>Scheduled reports</li></ul>
+      </article>
+      <article class="card rv" id="svc-records" style="--c:var(--orange)">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 40V20l12-8 12 8v20"/><path d="M30 40V26l12 6v8"/><path d="M13 27h5M13 34h5M35 34h3"/></svg>
+        <h3>Records &amp; migration</h3>
+        <p>Years of registers, files and loose spreadsheets brought into one clean database — entered, checked and reconciled before anything goes live.</p>
+        <ul><li>Data entry</li><li>Migration</li><li>Clean-up</li></ul>
+      </article>
+      <article class="card rv" id="svc-hosting" style="--c:var(--red)">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M40 24a16 16 0 11-5-11.6"/><path d="M40 6v9h-9"/><path d="M24 15v9l6 4"/></svg>
+        <h3>Hosting &amp; support</h3>
+        <p>We host, back up, monitor and update what we build — or hand it to your own server and IT team, with the documentation to run it.</p>
+        <ul><li>Cloud hosting</li><li>Backups</li><li>AMC</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="industries">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Industries</p>
+      <h2>Same problem, different register.</h2>
+      <p class="lede">Whatever the sector, the pattern is identical — information written by hand in one place, needed urgently somewhere else. Here's what that looks like, and what replaces it.</p>
+    </div>
+    <div class="sectors">
+      <article class="sector rv" style="--c:var(--blue)">
+        <h3>Educational institutions</h3>
+        <ul class="from-to">
+          <li><b>From</b><span>Admission files, attendance registers, fee receipt books, library cards</span></li>
+          <li><b>To</b><span>One system, with portals for staff, students and parents</span></li>
+        </ul>
+        <p>Schools, colleges, coaching centres and training institutes.</p>
+      </article>
+      <article class="sector rv" style="--c:var(--green)">
+        <h3>Manufacturing &amp; industry</h3>
+        <ul class="from-to">
+          <li><b>From</b><span>Job cards, stores registers, quality checklists, dispatch slips</span></li>
+          <li><b>To</b><span>Production, inventory and quality tracked as it happens</span></li>
+        </ul>
+        <p>Factories, workshops, processing units and engineering firms.</p>
+      </article>
+      <article class="sector rv" style="--c:var(--yellow)">
+        <h3>Businesses, small and large</h3>
+        <ul class="from-to">
+          <li><b>From</b><span>Order books, stock counts, staff attendance, WhatsApp approvals</span></li>
+          <li><b>To</b><span>Billing, stock, HR and payroll in one place, with an audit trail</span></li>
+        </ul>
+        <p>Retail, distribution, logistics, services and professional firms.</p>
+      </article>
+      <article class="sector rv" style="--c:var(--orange)">
+        <h3>Government &amp; public bodies</h3>
+        <ul class="from-to">
+          <li><b>From</b><span>Paper applications, ledger entries, manual demand and collection</span></li>
+          <li><b>To</b><span>Citizen-facing forms, digital records and reportable figures</span></li>
+        </ul>
+        <p>Departments, municipal bodies, co-operatives and trusts.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Why Ojzoor</p>
+      <h2>The part most vendors skip.</h2>
+      <p class="lede">These projects rarely fail in the code. They fail at the counter, when staff go back to the old way because the screen confused them or nobody trained them.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item rv" style="--c:var(--blue)">
+        <b>1</b>
+        <h3>One team, start to finish</h3>
+        <p>The engineers who scope your project are the ones who build it. No handover to a junior bench.</p>
+      </div>
+      <div class="why-item rv" style="--c:var(--green)">
+        <b>Day 1</b>
+        <h3>You own everything</h3>
+        <p>Repository, database and documentation sit in your accounts from the first commit.</p>
+      </div>
+      <div class="why-item rv" style="--c:var(--yellow)">
+        <b>2 wks</b>
+        <h3>Something real, quickly</h3>
+        <p>Every two-week increment ends with working software on a staging URL you can click through.</p>
+      </div>
+      <div class="why-item rv" style="--c:var(--orange)">
+        <b>Training</b>
+        <h3>Your staff, taught properly</h3>
+        <p>Hands-on sessions for every role and a manual in plain language, before go-live and after.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="proc">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">How we work</p>
+      <h2>Four phases, in this order.</h2>
+      <p class="lede">The order matters, so it's numbered. You can stop after any phase and keep everything produced up to that point.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv" style="--c:var(--cyan)">
+        <div class="step-n">PHASE 01</div><div><h3>Understand</h3></div>
+        <div><p>We sit with the people doing the work — in your office, campus or plant — and map every form, entry and workaround. That's where the real requirements are, not in the brief.</p>
+        <span class="step-out">You keep → process map, prioritised list, fixed-price quote</span></div>
+      </div>
+      <div class="step rv" style="--c:var(--green)">
+        <div class="step-n">PHASE 02</div><div><h3>Design</h3></div>
+        <div><p>Screen-by-screen designs you click through and correct before development starts, plus the data model and hosting decisions written down with the trade-offs we rejected.</p>
+        <span class="step-out">You keep → clickable designs, schema, cost model</span></div>
+      </div>
+      <div class="step rv" style="--c:var(--yellow)">
+        <div class="step-n">PHASE 03</div><div><h3>Build &amp; migrate</h3></div>
+        <div><p>Delivered module by module so your team uses the first part while we build the next. Existing records are entered, reconciled and signed off before anything goes live.</p>
+        <span class="step-out">You keep → working software, migrated data, deployment pipeline</span></div>
+      </div>
+      <div class="step rv" style="--c:var(--orange)">
+        <div class="step-n">PHASE 04</div><div><h3>Train &amp; run</h3></div>
+        <div><p>Hands-on training for every role, a manual in plain language, and support through the first months. Then we keep running it, or hand it to your IT team entirely.</p>
+        <span class="step-out">You keep → runbooks, training sessions, source and infrastructure</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="engage">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Engagement</p>
+      <h2>Three ways to start.</h2>
+      <p class="lede">Pick by how well-defined the problem is, not by budget. We'll suggest a different one if it fits you better.</p>
+    </div>
+    <div class="plans">
+      <article class="plan rv" style="--c:var(--cyan)">
+        <h3>Ready-made product</h3>
+        <p class="plan-for">For schools and colleges</p>
+        <p>Our School Education System, configured to your classes, terms, fee structure and report card format. Hosted by us or installed on your server.</p>
+        <ul><li>Set up in weeks, not months</li><li>Existing records migrated</li><li>Staff training included</li></ul>
+      </article>
+      <article class="plan is-featured rv" style="--c:var(--yellow)">
+        <span class="plan-flag">Most chosen</span>
+        <h3>Custom build</h3>
+        <p class="plan-for">When your process is your own</p>
+        <p>A dedicated squad — lead engineer, developers, part-time designer — working in two-week increments until it ships and your staff are using it.</p>
+        <ul><li>Fixed scope, fixed price</li><li>Weekly demo and written update</li><li>Support and training after launch</li></ul>
+      </article>
+      <article class="plan rv" style="--c:var(--orange)">
+        <h3>Embedded team</h3>
+        <p class="plan-for">When you need capacity, not a vendor</p>
+        <p>Our engineers join your standups, your board and your codebase. Monthly rolling, thirty days' notice, no lock-in.</p>
+        <ul><li>Works in your process</li><li>Scale up or down monthly</li><li>Knowledge stays with your team</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap faq-grid">
+    <div class="sec-head rv" style="margin-bottom:0">
+      <p class="eyebrow">Before you ask</p>
+      <h2>The questions we get on every first call.</h2>
+    </div>
+    <div class="faq-list rv">
+      <details>
+        <summary>Can we see the school system before deciding?</summary>
+        <div class="faq-body"><p>Yes — there's a live demo linked in the product section above, and we'll give you login details so you can click through it properly. Better still, we'll walk your office staff and a teacher through it on a call, using your own class structure as the example.</p></div>
+      </details>
+      <details>
+        <summary>What does a project typically cost?</summary>
+        <div class="faq-body"><p>The school system is priced by institution size and the modules you turn on, quoted up front. Custom builds are quoted after we've mapped your process, when we know the real scope. We won't put a number on your project before we understand it, and we won't bill hourly for work we scoped ourselves.</p></div>
+      </details>
+      <details>
+        <summary>Our staff aren't comfortable with computers. Is that a problem?</summary>
+        <div class="faq-body"><p>It's the normal starting point, and we design for it. Big buttons, plain labels, few clicks, and screens that work on an ordinary phone. Training is hands-on and repeated after go-live, because the first week is when people give up on new software.</p></div>
+      </details>
+      <details>
+        <summary>What happens to our existing records?</summary>
+        <div class="faq-body"><p>We bring them in. Old registers, Excel files and previous software exports are entered or imported, then reconciled against your own totals and signed off by your team before go-live. Nothing gets switched on against half-migrated data.</p></div>
+      </details>
+      <details>
+        <summary>Who owns the software and the data?</summary>
+        <div class="faq-body"><p>You do. For custom work the repository and database live in your accounts from the first commit. For our school system your data is yours, exportable at any time, and it can be installed on your own server if your institution requires that.</p></div>
+      </details>
+      <details>
+        <summary>Do you support the system after it goes live?</summary>
+        <div class="faq-body"><p>Yes, on an annual support agreement — hosting, backups, updates and a person to call when something looks wrong. If you'd rather your own IT team ran it, we hand over the documentation and train them instead.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap cta-in">
+    <div class="rv">
+      <h2>Let's talk about what you're running today.</h2>
+      <p>Book a thirty-minute call. Describe one process that's slowing you down, and we'll tell you plainly what it would take to fix it — and whether we're the right people for it.</p>
+    </div>
+    <div class="cta-actions rv">
+      <a class="btn btn-light" href="#contact">Book a call <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      <a class="btn btn-outline-light" href="mailto:hello@ojzoor.com">Email us instead</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap contact-grid">
+    <div class="rv">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Start a conversation.</h2>
+      <p class="lede">A short call, no deck. If we're not the right fit we'll say so on that call and suggest who is.</p>
+      <ul class="contact-list">
+        <li><b>Email</b><a href="mailto:hello@ojzoor.com">hello@ojzoor.com</a></li>
+        <li><b>Phone</b><a href="tel:+919439888143">+91 94 3988 8143</a></li>
+        <li><b>Office</b><span>Plot No. 1048/1479, Patrapeta Street, Corporation Road, Berhampur, Ganjam, Odisha – 760001, India</span></li>
+        <li><b>Working hours</b><span>Mon–Fri | 10:00 AM–7:00 PM IST</span></li>
+        <li><b>Response time</b><span>Same working day, usually within four hours</span></li>
+      </ul>
+    </div>
+    <div class="rv">
+      <form class="form" id="contactForm" novalidate>
+        <div class="two">
+          <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="Jone Doe" required></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="jone@example.com" required></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="org">Organisation</label><input id="org" name="org" type="text" placeholder="Organizaton name"></div>
+          <div class="field"><label for="orgtype">Type of organisation</label>
+            <select id="orgtype" name="orgtype">
+              <option>Educational institution</option><option>Manufacturing / industry</option>
+              <option>Business — small</option><option>Business — large</option>
+              <option>Government / public body</option><option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="kind">What you need</label>
+          <select id="kind" name="kind">
+            <option>School Education System</option><option>Custom software</option>
+            <option>Records &amp; migration</option><option>Process automation</option>
+            <option>Reports &amp; dashboards</option><option>Mobile app</option>
+            <option>Hosting &amp; support</option><option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field"><label for="msg">Tell us about the project</label><textarea id="msg" name="msg" placeholder="Which business process would you like to transform?" required></textarea></div>
+        <button class="btn btn-light" type="submit">Send message</button>
+        <p class="form-note">We reply to everything. No newsletter, no sequence.</p>
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="creds">
+      <p>How we work</p>
+      <ul><li>NDA before first call</li><li>Your data stays yours</li><li>Signed SLAs</li><li>On-site training</li><li>Source escrow on request</li></ul>
+    </div>
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="foot-lockup">
+          <svg class="mark" viewBox="0 0 185 173" aria-hidden="true"><use href="#ojzoor-dots"/></svg>
+          <svg class="word" viewBox="0 0 1300 186" role="img" aria-label="Ojzoor"><use href="#ojzoor-word"/></svg>
+        </div>
+        <p>Ojzoor builds and runs software for educational institutions, manufacturers, businesses and government bodies — our own products, and systems built to order.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col"><h5>Product</h5><ul>
+          <li><a href="#product">School Education System</a></li>
+          <li><a href="http://143.110.183.128/" target="_blank" rel="noopener">Live demo</a></li>
+          <li><a href="#contact">Request a walkthrough</a></li></ul></div>
+        <div class="foot-col"><h5>Services</h5><ul>
+          <li><a href="#svc-custom">Custom software</a></li><li><a href="#svc-records">Records &amp; migration</a></li>
+          <li><a href="#svc-automation">Process automation</a></li><li><a href="#svc-reports">Reports &amp; dashboards</a></li>
+          <li><a href="#svc-hosting">Hosting &amp; support</a></li></ul></div>
+        <div class="foot-col"><h5>Company</h5><ul>
+          <li><a href="#industries">Industries</a></li><li><a href="#why">Why Ojzoor</a></li>
+          <li><a href="#process">How we work</a></li><li><a href="#engage">Engagement</a></li>
+          <li><a href="#faq">FAQ</a></li></ul></div>
+        <div class="foot-col"><h5>Talk to us</h5><ul>
+          <li><a href="mailto:hello@ojzoor.com">hello@ojzoor.com</a></li>
+          <li><a href="tel:+919439888143">+91 94 3988 8143</a></li>
+          <li><a href="#contact">Book a demo</a></li></ul></div>
+      </div>
+    </div>
+    <div class="foot-rule"></div>
+    <div class="foot-bot">
+      <p>&copy; <span id="yr">2026</span> Ojzoor. Engineering what's next.</p>
+      <p>Privacy · Terms</p>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13V3M4 7l4-4 4 4"/></svg>
+</button>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  function toTop(ev){
+    if (ev) ev.preventDefault();
+    window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'});
+    if (history.replaceState) history.replaceState(null, '', location.pathname + location.search);
+  }
+  document.getElementById('brandLink').addEventListener('click', toTop);
+  document.getElementById('navHome').addEventListener('click', toTop);
+  document.getElementById('toTop').addEventListener('click', function(){ toTop(); });
+
+  var bar = document.getElementById('progress'), top = document.getElementById('toTop');
+  function onScroll(){
+    var y = window.scrollY, max = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+    top.classList.toggle('is-shown', y > 700);
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  var btn = document.getElementById('menuBtn'), sheet = document.getElementById('sheet');
+  function setMenu(open){
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    sheet.classList.toggle('is-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  btn.addEventListener('click', function(){ setMenu(btn.getAttribute('aria-expanded') !== 'true'); });
+  sheet.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setMenu(false); });
+
+  var track = document.getElementById('track'), list = document.getElementById('trackList');
+  if (track && list) { var copy = list.cloneNode(true); copy.removeAttribute('id'); copy.setAttribute('aria-hidden','true'); track.appendChild(copy); }
+
+  if ('IntersectionObserver' in window && !reduce) {
+    var rv = new IntersectionObserver(function(en){
+      en.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); rv.unobserve(e.target); } });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.06});
+    document.querySelectorAll('.rv').forEach(function(el,i){
+      el.style.transitionDelay = (Math.min(i % 5, 4) * 60) + 'ms'; rv.observe(el);
+    });
+  } else {
+    document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('in'); });
+  }
+  function sweepIn(){
+    document.querySelectorAll('.rv:not(.in)').forEach(function(el){
+      if (el.getBoundingClientRect().top < window.innerHeight * 0.95) el.classList.add('in');
+    });
+  }
+  window.addEventListener('scroll', sweepIn, {passive:true});
+  window.addEventListener('load', sweepIn);
+
+  /* nav scrollspy */
+  var navs = [].slice.call(document.querySelectorAll('.nav a'));
+  var secs = navs.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  if ('IntersectionObserver' in window) {
+    var spy = new IntersectionObserver(function(en){
+      en.forEach(function(e){
+        if (!e.isIntersecting) return;
+        var id = '#' + e.target.id;
+        navs.forEach(function(a){ a.classList.toggle('is-current', a.getAttribute('href') === id); });
+      });
+    }, {rootMargin:'-45% 0px -50% 0px'});
+    secs.forEach(function(s){ if (s) spy.observe(s); });
+  }
+
+  var form = document.getElementById('contactForm'), status = document.getElementById('formStatus');
+  function say(msg, ok){
+    status.className = 'form-status is-shown';
+    status.style.background = ok ? 'rgba(43,194,74,.16)' : 'rgba(238,43,43,.16)';
+    status.style.border = '1px solid ' + (ok ? 'rgba(43,194,74,.4)' : 'rgba(238,43,43,.45)');
+    status.textContent = msg;
+  }
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var n = form.name.value.trim(), e = form.email.value.trim(), m = form.msg.value.trim();
+    if (!n || !e || !m) return say('Add your name, email and a short description before sending.', false);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e)) return say('That email address looks incomplete — check it and send again.', false);
+    /* TODO: POST to your endpoint here, e.g.
+       fetch('/api/contact', {method:'POST', body:new FormData(form)}) */
+    say('Ready to send — this form has no endpoint wired up yet. Connect it where marked in the script, or email hello@ojzoor.com.', true);
+  });
+})();
+</script>
+</body>
+</html>
