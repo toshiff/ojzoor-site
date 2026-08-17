@@ -777,6 +777,7 @@ section{padding-block:clamp(60px,6.5vw,110px)}
         <div class="two">
           <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="Jone Doe" required></div>
           <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="jone@example.com" required></div>
+          <div class="field"><label for="phone">Mobile number</label><input id="phone" name="phone" type="tel" inputmode="numeric" placeholder="98765 43210" required></div>
         </div>
         <div class="two">
           <div class="field"><label for="org">Organisation</label><input id="org" name="org" type="text" placeholder="Organizaton name"></div>
@@ -931,8 +932,10 @@ section{padding-block:clamp(60px,6.5vw,110px)}
   form.addEventListener('submit', function(ev){
     ev.preventDefault();
     var n = form.name.value.trim(), e = form.email.value.trim(), m = form.msg.value.trim();
-    if (!n || !e || !m) return say('Add your name, email and a short description before sending.', false);
+    var p = form.phone.value.trim();
+    if (!n || !e || !p || !m) return say('Add your name, email, mobile number and a short description before sending.', false);
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e)) return say('That email address looks incomplete — check it and send again.', false);
+    if (!/^(\+?91[\s-]?)?[6-9]\d{9}$/.test(p.replace(/[\s-]/g, ''))) return say('Enter a valid 10-digit mobile number.', false);
     var btn = form.querySelector('button[type=submit]');
     btn.disabled = true; btn.textContent = 'Sending…';
 
