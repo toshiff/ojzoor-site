@@ -466,7 +466,7 @@ section{padding-block:clamp(60px,6.5vw,110px)}
         <p style="color:var(--ink-2)">Admission forms, attendance, fee receipts, library issues, marks sheets and staff records usually sit in separate books kept by separate people. When the principal asks a question, someone spends a morning adding it up. Here it's entered once and every report is already current.</p>
         <p style="color:var(--ink-2)">We host it, back it up and update it — or install it on your own server if your institution requires that.</p>
         <div class="prod-actions">
-          <a class="btn btn-ink" href="http://143.110.183.128/" target="_blank" rel="noopener">Open the live demo <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h8v8M14 2L6 10M12 9v5H2V4h5"/></svg></a>
+          <a class="btn btn-ink" href="https://schoolerp.ojzoor.com/" target="_blank" rel="noopener">Open the live demo <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h8v8M14 2L6 10M12 9v5H2V4h5"/></svg></a>
           <a class="btn btn-ghost" href="#contact">Request a walkthrough</a>
         </div>
         <p class="prod-note">Opens in a new tab · Ask us for demo login details</p>
@@ -776,8 +776,18 @@ section{padding-block:clamp(60px,6.5vw,110px)}
 	</div>
         <div class="two">
           <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="Jone Doe" required></div>
-          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="jone@example.com" required></div>
+          <div class="field"><label for="kind">What you need</label>
+            <select id="kind" name="kind">
+              <option>School Education System</option><option>Custom software</option>
+              <option>Records &amp; migration</option><option>Process automation</option>
+              <option>Reports &amp; dashboards</option><option>Mobile app</option>
+              <option>Hosting &amp; support</option><option>Not sure yet</option>
+            </select>
+          </div>
+        </div>
+        <div class="two">
           <div class="field"><label for="phone">Mobile number</label><input id="phone" name="phone" type="tel" inputmode="numeric" placeholder="98765 43210" required></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="jone@example.com" required></div>
         </div>
         <div class="two">
           <div class="field"><label for="org">Organisation</label><input id="org" name="org" type="text" placeholder="Organizaton name"></div>
@@ -788,14 +798,6 @@ section{padding-block:clamp(60px,6.5vw,110px)}
               <option>Government / public body</option><option>Other</option>
             </select>
           </div>
-        </div>
-        <div class="field"><label for="kind">What you need</label>
-          <select id="kind" name="kind">
-            <option>School Education System</option><option>Custom software</option>
-            <option>Records &amp; migration</option><option>Process automation</option>
-            <option>Reports &amp; dashboards</option><option>Mobile app</option>
-            <option>Hosting &amp; support</option><option>Not sure yet</option>
-          </select>
         </div>
         <div class="field"><label for="msg">Tell us about the project</label><textarea id="msg" name="msg" placeholder="Which business process would you like to transform?" required></textarea></div>
         <button class="btn btn-light" type="submit">Send message</button>
@@ -825,7 +827,7 @@ section{padding-block:clamp(60px,6.5vw,110px)}
       <div class="foot-cols">
         <div class="foot-col"><h5>Product</h5><ul>
           <li><a href="#product">School Education System</a></li>
-          <li><a href="http://143.110.183.128/" target="_blank" rel="noopener">Live demo</a></li>
+          <li><a href="https://schoolerp.ojzoor.com/" target="_blank" rel="noopener">Live demo</a></li>
           <li><a href="#contact">Request a walkthrough</a></li></ul></div>
         <div class="foot-col"><h5>Services</h5><ul>
           <li><a href="#svc-custom">Custom software</a></li><li><a href="#svc-records">Records &amp; migration</a></li>
@@ -943,7 +945,7 @@ section{padding-block:clamp(60px,6.5vw,110px)}
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-        name: n, email: e, message: m,
+        name: n, email: e, message: m, phone: p,
         organisation: form.org.value.trim(),
         org_type: form.orgtype.value,
         need: form.kind.value,
@@ -960,7 +962,7 @@ section{padding-block:clamp(60px,6.5vw,110px)}
       }
     })
     .catch(function(){
-      say('Could not reach the server. Please email ojzoor@ojzoor.com instead.', false);
+      say('Could not reach the server. Please email info@ojzoor.com instead.', false);
     })
     .finally(function(){
       btn.disabled = false; btn.textContent = 'Send message';
