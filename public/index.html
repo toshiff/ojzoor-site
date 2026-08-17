@@ -953,11 +953,11 @@ section{padding-block:clamp(60px,6.5vw,110px)}
         form.reset();
         say('Thanks — we have your message and will reply the same working day.', true);
       } else {
-        say('Something went wrong. Please email hello@ojzoor.com instead.', false);
+        say('Something went wrong. Please email info@ojzoor.com instead.', false);
       }
     })
     .catch(function(){
-      say('Could not reach the server. Please email hello@ojzoor.com instead.', false);
+      say('Could not reach the server. Please email ojzoor@ojzoor.com instead.', false);
     })
     .finally(function(){
       btn.disabled = false; btn.textContent = 'Send message';
