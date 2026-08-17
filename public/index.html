@@ -771,9 +771,9 @@ section{padding-block:clamp(60px,6.5vw,110px)}
     </div>
     <div class="rv">
       <form class="form" id="contactForm" novalidate>
-	<div style="position:absolute;left:-9999px" aria-hidden="true">
-	  <input name="hp" type="text" tabindex="-1" autocomplete="off">
-	</div>
+	<div style="position:absolute;left:-9999px;top:-9999px" aria-hidden="true">
+    <input name="hp" id="ojz_ref" type="text" tabindex="-1" autocomplete="new-password" value="">
+  </div>
         <div class="two">
           <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="Jone Doe" required></div>
           <div class="field"><label for="kind">What you need</label>
@@ -949,7 +949,7 @@ section{padding-block:clamp(60px,6.5vw,110px)}
         organisation: form.org.value.trim(),
         org_type: form.orgtype.value,
         need: form.kind.value,
-        hp: form.hp.value
+        hp: form.hp.value.trim()
       })
     })
     .then(function(r){ return r.json(); })
