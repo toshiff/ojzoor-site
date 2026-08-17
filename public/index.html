@@ -771,6 +771,9 @@ section{padding-block:clamp(60px,6.5vw,110px)}
     </div>
     <div class="rv">
       <form class="form" id="contactForm" novalidate>
+	<div style="position:absolute;left:-9999px" aria-hidden="true">
+	  <input name="hp" type="text" tabindex="-1" autocomplete="off">
+	</div>
         <div class="two">
           <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="Jone Doe" required></div>
           <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="jone@example.com" required></div>
@@ -930,9 +933,35 @@ section{padding-block:clamp(60px,6.5vw,110px)}
     var n = form.name.value.trim(), e = form.email.value.trim(), m = form.msg.value.trim();
     if (!n || !e || !m) return say('Add your name, email and a short description before sending.', false);
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e)) return say('That email address looks incomplete — check it and send again.', false);
-    /* TODO: POST to your endpoint here, e.g.
-       fetch('/api/contact', {method:'POST', body:new FormData(form)}) */
-    say('Ready to send — this form has no endpoint wired up yet. Connect it where marked in the script, or email info@ojzoor.com.', true);
+    var btn = form.querySelector('button[type=submit]');
+    btn.disabled = true; btn.textContent = 'Sending…';
+
+    fetch('https://schoolerp.ojzoor.com/api/method/ojzoor_web.api.submit_enquiry', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        name: n, email: e, message: m,
+        organisation: form.org.value.trim(),
+        org_type: form.orgtype.value,
+        need: form.kind.value,
+        hp: form.hp.value
+      })
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if (d.message && d.message.ok) {
+        form.reset();
+        say('Thanks — we have your message and will reply the same working day.', true);
+      } else {
+        say('Something went wrong. Please email hello@ojzoor.com instead.', false);
+      }
+    })
+    .catch(function(){
+      say('Could not reach the server. Please email hello@ojzoor.com instead.', false);
+    })
+    .finally(function(){
+      btn.disabled = false; btn.textContent = 'Send message';
+    });
   });
 })();
 </script>
