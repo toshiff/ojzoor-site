@@ -164,7 +164,11 @@ section{padding-block:clamp(60px,6.5vw,110px)}
 .card:target::before{transform:scaleX(1)}
 .card:target{box-shadow:0 22px 46px -26px rgba(21,30,66,.44)}
 /* ---------- industries ---------- */
-.sectors{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.sectors{
+  display:grid;
+  gap:16px;
+  grid-template-columns:repeat(4,1fr);
+}
 .sector{background:var(--card);border:1px solid var(--line);padding:30px 28px;border-top:3px solid var(--c);transition:transform .26s cubic-bezier(.2,.8,.3,1),box-shadow .26s}
 .sector:hover{transform:translateY(-4px);box-shadow:0 22px 46px -26px rgba(21,30,66,.4)}
 .sector h3{font-size:19px;margin-bottom:14px}
@@ -426,7 +430,7 @@ section{padding-block:clamp(60px,6.5vw,110px)}
     <div class="hero-side">
       <div class="hero-rule"></div>
       <h2>Engineering what's next</h2>
-      <p>Ojzoor designs, builds and runs the software that organisations depend on — for educational institutions, manufacturers, businesses of every size, and government bodies. Our own products, and systems built to order.</p>
+      <p>Ojzoor designs, builds, and operates the software organisations rely on — powering educational institutions, HR and payroll, manufacturing, accounting, businesses of all sizes, and government bodies. From our own products to tailor-made solutions, we build technology around the way you work.</p>
       <a class="hero-link" href="#services">
         See what we do
         <i><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/></svg></i>
@@ -600,6 +604,22 @@ section{padding-block:clamp(60px,6.5vw,110px)}
         </ul>
         <p>Schools, colleges, coaching centres and training institutes.</p>
       </article>
+      <article class="sector rv" style="--c:var(--red)">
+        <h3>HR &amp; Payroll</h3>
+        <ul class="from-to">
+          <li><b>From</b><span>Manual attendance, spreadsheets, leave records and salary calculations</span></li>
+          <li><b>To</b><span>Employee records, attendance, leave and payroll managed in one place</span></li>
+        </ul>
+        <p>Businesses and organisations managing employees, attendance, HR processes and payroll.</p>
+      </article>
+      <article class="sector rv" style="--c:var(--orange)">
+        <h3>Buying &amp; Selling</h3>
+        <ul class="from-to">
+          <li><b>From</b><span>Purchase orders, sales invoices, supplier records and stock updates</span></li>
+          <li><b>To</b><span>Purchasing, sales, inventory and customer transactions connected end to end</span></li>
+        </ul>
+        <p>Businesses managing suppliers, customers, purchasing, sales and inventory.</p>
+      </article>
       <article class="sector rv" style="--c:var(--green)">
         <h3>Manufacturing &amp; industry</h3>
         <ul class="from-to">
@@ -608,7 +628,23 @@ section{padding-block:clamp(60px,6.5vw,110px)}
         </ul>
         <p>Factories, workshops, processing units and engineering firms.</p>
       </article>
-      <article class="sector rv" style="--c:var(--yellow)">
+      <article class="sector rv" style="--c:var(--violet)">
+        <h3>Accounting</h3>
+        <ul class="from-to">
+          <li><b>From</b><span>Spreadsheets, manual entries, payment records and disconnected financial data</span></li>
+          <li><b>To</b><span>Accounts, payments, receivables, payables and financial reporting in one place</span></li>
+        </ul>
+        <p>Organisations managing finances, transactions, compliance and business performance.</p>
+      </article>
+      <article class="sector rv" style="--c:var(--deep)">
+        <h3>Ecommerce</h3>
+        <ul class="from-to">
+          <li><b>From</b><span>Manual orders, scattered product listings, stock updates and customer records</span></li>
+          <li><b>To</b><span>Products, orders, inventory, payments and customers managed seamlessly online</span></li>
+        </ul>
+        <p>Businesses selling products online and managing digital commerce operations.</p>
+      </article>
+      <article class="sector rv" style="--c:var(--cyan)">
         <h3>Businesses, small and large</h3>
         <ul class="from-to">
           <li><b>From</b><span>Order books, stock counts, staff attendance, WhatsApp approvals</span></li>
@@ -616,7 +652,7 @@ section{padding-block:clamp(60px,6.5vw,110px)}
         </ul>
         <p>Retail, distribution, logistics, services and professional firms.</p>
       </article>
-      <article class="sector rv" style="--c:var(--orange)">
+      <article class="sector rv" style="--c:var(--yellow)">
         <h3>Government &amp; public bodies</h3>
         <ul class="from-to">
           <li><b>From</b><span>Paper applications, ledger entries, manual demand and collection</span></li>
@@ -870,7 +906,7 @@ section{padding-block:clamp(60px,6.5vw,110px)}
           <svg class="mark" viewBox="0 0 185 173" aria-hidden="true"><use href="#ojzoor-dots"/></svg>
           <svg class="word" viewBox="0 0 1300 186" role="img" aria-label="Ojzoor"><use href="#ojzoor-word"/></svg>
         </div>
-        <p>Ojzoor builds and runs software for educational institutions, manufacturers, businesses and government bodies — our own products, and systems built to order.</p>
+        <p>Ojzoor designs, builds, and operates the software organisations rely on — powering educational institutions, HR and payroll, manufacturing, accounting, businesses of all sizes, and government bodies. From our own products to tailor-made solutions, we build technology around the way you work.</p>
       </div>
       <div class="foot-cols">
         <div class="foot-col"><h5>Product</h5><ul>
