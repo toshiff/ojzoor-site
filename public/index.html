@@ -169,6 +169,18 @@ section{padding-block:clamp(60px,6.5vw,110px)}
   gap:16px;
   grid-template-columns:repeat(4,1fr);
 }
+.sector{display:flex;flex-direction:column}
+.sector-link{
+  display:inline-flex;align-items:center;gap:8px;
+  margin-top:16px;
+  font-family:var(--mono);font-size:12.5px;font-weight:500;
+  letter-spacing:.04em;text-transform:uppercase;
+  color:var(--c);text-decoration:none;
+  transition:gap .2s;
+}
+.sector-link svg{width:13px;height:13px;transition:transform .2s}
+.sector-link:hover{gap:12px}
+.sector-link:hover svg{transform:translateX(2px)}
 .sector{background:var(--card);border:1px solid var(--line);padding:30px 28px;border-top:3px solid var(--c);transition:transform .26s cubic-bezier(.2,.8,.3,1),box-shadow .26s}
 .sector:hover{transform:translateY(-4px);box-shadow:0 22px 46px -26px rgba(21,30,66,.4)}
 .sector h3{font-size:19px;margin-bottom:14px}
@@ -603,6 +615,9 @@ section{padding-block:clamp(60px,6.5vw,110px)}
           <li><b>To</b><span>One system, with portals for staff, students and parents</span></li>
         </ul>
         <p>Schools, colleges, coaching centres and training institutes.</p>
+        <a class="sector-link" href="#contact">Explore more
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/></svg>
+        </a>
       </article>
       <article class="sector rv" style="--c:var(--red)">
         <h3>HR &amp; Payroll</h3>
@@ -611,6 +626,9 @@ section{padding-block:clamp(60px,6.5vw,110px)}
           <li><b>To</b><span>Employee records, attendance, leave and payroll managed in one place</span></li>
         </ul>
         <p>Businesses and organisations managing employees, attendance, HR processes and payroll.</p>
+        <a class="sector-link" href="#contact">Explore more
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/></svg>
+        </a>
       </article>
       <article class="sector rv" style="--c:var(--orange)">
         <h3>Buying &amp; Selling</h3>
@@ -619,6 +637,9 @@ section{padding-block:clamp(60px,6.5vw,110px)}
           <li><b>To</b><span>Purchasing, sales, inventory and customer transactions connected end to end</span></li>
         </ul>
         <p>Businesses managing suppliers, customers, purchasing, sales and inventory.</p>
+        <a class="sector-link" href="#contact">Explore more
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/></svg>
+        </a>
       </article>
       <article class="sector rv" style="--c:var(--green)">
         <h3>Manufacturing &amp; industry</h3>
@@ -627,6 +648,9 @@ section{padding-block:clamp(60px,6.5vw,110px)}
           <li><b>To</b><span>Production, inventory and quality tracked as it happens</span></li>
         </ul>
         <p>Factories, workshops, processing units and engineering firms.</p>
+        <a class="sector-link" href="#contact">Explore more
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/></svg>
+        </a>
       </article>
       <article class="sector rv" style="--c:var(--violet)">
         <h3>Accounting</h3>
@@ -635,6 +659,9 @@ section{padding-block:clamp(60px,6.5vw,110px)}
           <li><b>To</b><span>Accounts, payments, receivables, payables and financial reporting in one place</span></li>
         </ul>
         <p>Organisations managing finances, transactions, compliance and business performance.</p>
+        <a class="sector-link" href="#contact">Explore more
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/></svg>
+        </a>
       </article>
       <article class="sector rv" style="--c:var(--deep)">
         <h3>Ecommerce</h3>
@@ -643,6 +670,9 @@ section{padding-block:clamp(60px,6.5vw,110px)}
           <li><b>To</b><span>Products, orders, inventory, payments and customers managed seamlessly online</span></li>
         </ul>
         <p>Businesses selling products online and managing digital commerce operations.</p>
+        <a class="sector-link" href="#contact">Explore more
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/></svg>
+        </a>
       </article>
       <article class="sector rv" style="--c:var(--cyan)">
         <h3>Businesses, small and large</h3>
@@ -651,6 +681,9 @@ section{padding-block:clamp(60px,6.5vw,110px)}
           <li><b>To</b><span>Billing, stock, HR and payroll in one place, with an audit trail</span></li>
         </ul>
         <p>Retail, distribution, logistics, services and professional firms.</p>
+        <a class="sector-link" href="#contact">Explore more
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/></svg>
+        </a>
       </article>
       <article class="sector rv" style="--c:var(--yellow)">
         <h3>Government &amp; public bodies</h3>
@@ -659,6 +692,9 @@ section{padding-block:clamp(60px,6.5vw,110px)}
           <li><b>To</b><span>Citizen-facing forms, digital records and reportable figures</span></li>
         </ul>
         <p>Departments, municipal bodies, co-operatives and trusts.</p>
+        <a class="sector-link" href="#contact">Explore more
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/></svg>
+        </a>
       </article>
     </div>
   </div>
@@ -816,7 +852,7 @@ section{padding-block:clamp(60px,6.5vw,110px)}
       <ul class="contact-list">
         <li><b>Email</b><a href="mailto:info@ojzoor.com">info@ojzoor.com</a></li>
         <li><b>Phone</b><a href="tel:+919439888143">+91 94 3988 8143</a></li>
-        <li><b>Office</b><span>Plot No. 1048/1479, Patrapeta Street, Corporation Road, Berhampur, Ganjam, Odisha – 760001, India</span></li>
+        <li><b>Office</b><span>Plot No. – 1048/1479, Corporation Road, <br>Berhampur, Odisha – 760001, <br>India</span></li>
         <li><b>Working hours</b><span>Mon–Fri | 10:00 AM–7:00 PM IST</span></li>
         <li><b>Response time</b><span>Same working day, usually within four hours</span></li>
       </ul>
