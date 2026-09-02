@@ -1077,6 +1077,8 @@ section{padding-block:clamp(60px,6.5vw,110px)}
       if (d.message && d.message.ok) {
         form.reset();
         say('Thanks — we have your message and will reply the same working day.', true);
+      } else if (d.exc_type === 'DuplicateEntryError' || (d.exception && d.exception.indexOf('DuplicateEntryError') !== -1)) {
+        say('We already have your enquiry on file and will be in touch shortly. If it\'s urgent, call +91 94 3988 8143.', true);
       } else {
         say('Something went wrong. Please email info@ojzoor.com instead.', false);
       }
